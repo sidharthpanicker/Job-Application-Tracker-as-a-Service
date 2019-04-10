@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="{% static 'js/main.js' %}"></script>
+    <title>Google Login</title>
+</head>
+  <body>
+    <header>
+      <h1>Job Application Tracking Assistant</h1>
+      {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">logout</a>
+      {% else %}
+        <a href="{% url 'login' %}">login</a> / <a href="{% url 'signup' %}">signup</a>
+      {% endif %}
+      <hr>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  <div>
+    <div>
+            <a href="/gmailAuthenticate" onclick="gmailAuthenticate()" title="Google">Google</a>
+    </div>
+
+    </div>
+  </body>
+</html>
