@@ -15,7 +15,6 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
-
 def home(request):
     status = True
     if not request.user.is_authenticated:
@@ -71,7 +70,16 @@ def gmail_authenticate(request):
         service = build('gmail', 'v1', http=http)
         print('access_token = ', credential.access_token)
         status = True
-
+        results = service.users().messages().list(userId='me', labelIds=['INBOX'], q="Microsoft").execute()
+        messages = results.get('messages', [])
+        print("Length", len(messages))
+        if not messages:
+            print("No messages found.")
+        else:
+            print("Message snippets:")
+            for message in messages:
+                msg = service.users().messages().get(userId='me', id=message['id']).execute()
+                print(msg['snippet'])
         return render(request, 'index.html', {'status': status})
 
 
