@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://huntr.co/app/track/boards/5cc7f370cd4c90000f4df5e4/board -->
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>JATS</title>
+      <meta name="description" content="JATS keeps track of every detail about your job applications - notes, dates, tasks, job descriptions, salaries, locations, company data and more.">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <!-- FONT
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link href="/static/jats_home/css" rel="stylesheet">
+      <!-- SRIPTS
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <script async="" src="/static/jats_home/analytics.js"></script><script type="text/javascript" async="" src="/static/jats_home/mixpanel-2-latest.min.js"></script><script src="/static/jats_home/cb=gapi.loaded_0" async=""></script><script src="/static/jats_home/saved_resource"></script>
+      <script src="/static/jats_home/client.js" gapi_processed="true"></script>
+      <script src="/static/jats_home/jquery.min.js"></script>
+      <script src="/static/jats_home/js.cookie.js"></script>
+      <script type="text/javascript" src="/static/jats_home/js"></script>
+      <!-- Mixpanel -->
+      <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+         0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+         for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+         mixpanel.init("1d6f823f8d5432354b55fc0af879343c");
+      </script>
+      <!-- end Mixpanel -->
+      <!-- STYLES
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link rel="stylesheet" href="/static/jats_home/animate.min.css">
+      <link href="/static/jats_home/main.css" rel="stylesheet">
+      <link href="/static/jats_home/simple-grid.css" rel="stylesheet">
+      <link href="/static/jats_home/react-datepicker.css" rel="stylesheet">
+      <link rel="stylesheet" href="/static/jats_home/simple-line-icons.css">
+      <meta property="og:title" content="jats - Job Application Tracker">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://huntr.co">
+      <meta property="og:image" content="http://huntr.co/images/jumbo_header_board_2x.png">
+      <style type="text/css"></style>
+      <style type="text/css">/* Chart.js */
+         @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
+      </style>
+      <style type="text/css">/*!
+         * Quill Editor v1.3.0
+         * https://quilljs.com/
+         * Copyright (c) 2014, Jason Chen
+         * Copyright (c) 2013, salesforce.com
+         */
+         .ql-container span,
+         .ql-container li,
+         .ql-container ul,
+         .ql-container div,
+         .ql-container strong,
+         .ql-container b,
+         .ql-container h1,
+         .ql-container h2,
+         .ql-container h3,
+         .ql-container h4,
+         .ql-container p  {
+         font-size: 14px;
+         font-family: Lato, Arial, sans-serif !important;
+         color: #180045 !important;
+         }
+         .ql-container {
+         box-sizing: border-box;
+         font-family: Lato, Arial, sans-serif;
+         font-size: 13px;
+         height: 100%;
+         margin: 0px;
+         position: relative;
+         }
+         .ql-container.ql-disabled .ql-tooltip {
+         visibility: hidden;
+         }
+         .ql-container.ql-disabled .ql-editor ul[data-checked] > li::before {
+         pointer-events: none;
+         }
+         .ql-clipboard {
+         left: -100000px;
+         height: 1px;
+         overflow-y: hidden;
+         position: absolute;
+         top: 50%;
+         }
+         .ql-clipboard p {
+         margin: 0;
+         padding: 0;
+         }
+         .ql-editor {
+         box-sizing: border-box;
+         line-height: 1.42;
+         height: 100%;
+         outline: none;
+         overflow-y: auto;
+         padding: 25px;
+         tab-size: 4;
+         -moz-tab-size: 4;
+         text-align: left;
+         white-space: pre-wrap;
+         word-wrap: break-word;
+         }
+         .ql-editor > * {
+         cursor: text;
+         }
+         .ql-editor p,
+         .ql-editor ol,
+         .ql-editor ul,
+         .ql-editor pre,
+         .ql-editor blockquote,
+         .ql-editor h1,
+         .ql-editor h2,
+         .ql-editor h3,
+         .ql-editor h4,
+         .ql-editor h5,
+         .ql-editor h6 {
+         white-space: pre-wrap;
+         margin: 0;
+         padding: 0;
+         counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+         }
+         .ql-editor ol,
+         .ql-editor ul {
+         padding-left: 1.5em;
+         }
+         .ql-editor ol > li,
+         .ql-editor ul > li {
+         list-style-type: none;
+         line-height: 1.42 !important;
+         }
+         .ql-editor ul > li::before {
+         content: '\2022';
+         }
+         .ql-editor ul[data-checked=true],
+         .ql-editor ul[data-checked=false] {
+         pointer-events: none;
+         }
+         .ql-editor ul[data-checked=true] > li *,
+         .ql-editor ul[data-checked=false] > li * {
+         pointer-events: all;
+         }
+         .ql-editor ul[data-checked=true] > li::before,
+         .ql-editor ul[data-checked=false] > li::before {
+         color: #777;
+         cursor: pointer;
+         pointer-events: all;
+         }
+         .ql-editor ul[data-checked=true] > li::before {
+         content: '\2611';
+         }
+         .ql-editor ul[data-checked=false] > li::before {
+         content: '\2610';
+         }
+         .ql-editor li::before {
+         display: inline-block;
+         white-space: nowrap;
+         width: 1.2em;
+         }
+         .ql-editor li:not(.ql-direction-rtl)::before {
+         margin-left: -1.5em;
+         margin-right: 0.3em;
+         text-align: right;
+         }
+         .ql-editor li.ql-direction-rtl::before {
+         margin-left: 0.3em;
+         margin-right: -1.5em;
+         }
+         .ql-editor ol li:not(.ql-direction-rtl),
+         .ql-editor ul li:not(.ql-direction-rtl) {
+         padding-left: 1.5em;
+         }
+         .ql-editor ol li.ql-direction-rtl,
+         .ql-editor ul li.ql-direction-rtl {
+         padding-right: 1.5em;
+         }
+         .ql-editor ol li {
+         counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+         counter-increment: list-0;
+         }
+         .ql-editor ol li:before {
+         content: counter(list-0, decimal) '. ';
+         }
+         .ql-editor ol li.ql-indent-1 {
+         counter-increment: list-1;
+         }
+         .ql-editor ol li.ql-indent-1:before {
+         content: counter(list-1, lower-alpha) '. ';
+         }
+         .ql-editor ol li.ql-indent-1 {
+         counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+         }
+         .ql-editor ol li.ql-indent-2 {
+         counter-increment: list-2;
+         }
+         .ql-editor ol li.ql-indent-2:before {
+         content: counter(list-2, lower-roman) '. ';
+         }
+         .ql-editor ol li.ql-indent-2 {
+         counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+         }
+         .ql-editor ol li.ql-indent-3 {
+         counter-increment: list-3;
+         }
+         .ql-editor ol li.ql-indent-3:before {
+         content: counter(list-3, decimal) '. ';
+         }
+         .ql-editor ol li.ql-indent-3 {
+         counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+         }
+         .ql-editor ol li.ql-indent-4 {
+         counter-increment: list-4;
+         }
+         .ql-editor ol li.ql-indent-4:before {
+         content: counter(list-4, lower-alpha) '. ';
+         }
+         .ql-editor ol li.ql-indent-4 {
+         counter-reset: list-5 list-6 list-7 list-8 list-9;
+         }
+         .ql-editor ol li.ql-indent-5 {
+         counter-increment: list-5;
+         }
+         .ql-editor ol li.ql-indent-5:before {
+         content: counter(list-5, lower-roman) '. ';
+         }
+         .ql-editor ol li.ql-indent-5 {
+         counter-reset: list-6 list-7 list-8 list-9;
+         }
+         .ql-editor ol li.ql-indent-6 {
+         counter-increment: list-6;
+         }
+         .ql-editor ol li.ql-indent-6:before {
+         content: counter(list-6, decimal) '. ';
+         }
+         .ql-editor ol li.ql-indent-6 {
+         counter-reset: list-7 list-8 list-9;
+         }
+         .ql-editor ol li.ql-indent-7 {
+         counter-increment: list-7;
+         }
+         .ql-editor ol li.ql-indent-7:before {
+         content: counter(list-7, lower-alpha) '. ';
+         }
+         .ql-editor ol li.ql-indent-7 {
+         counter-reset: list-8 list-9;
+         }
+         .ql-editor ol li.ql-indent-8 {
+         counter-increment: list-8;
+         }
+         .ql-editor ol li.ql-indent-8:before {
+         content: counter(list-8, lower-roman) '. ';
+         }
+         .ql-editor ol li.ql-indent-8 {
+         counter-reset: list-9;
+         }
+         .ql-editor ol li.ql-indent-9 {
+         counter-increment: list-9;
+         }
+         .ql-editor ol li.ql-indent-9:before {
+         content: counter(list-9, decimal) '. ';
+         }
+         .ql-editor .ql-indent-1:not(.ql-direction-rtl) {
+         padding-left: 3em;
+         }
+         .ql-editor li.ql-indent-1:not(.ql-direction-rtl) {
+         padding-left: 4.5em;
+         }
+         .ql-editor .ql-indent-1.ql-direction-rtl.ql-align-right {
+         padding-right: 3em;
+         }
+         .ql-editor li.ql-indent-1.ql-direction-rtl.ql-align-right {
+         padding-right: 4.5em;
+         }
+         .ql-editor .ql-indent-2:not(.ql-direction-rtl) {
+         padding-left: 6em;
+         }
+         .ql-editor li.ql-indent-2:not(.ql-direction-rtl) {
+         padding-left: 7.5em;
+         }
+         .ql-editor .ql-indent-2.ql-direction-rtl.ql-align-right {
+         padding-right: 6em;
+         }
+         .ql-editor li.ql-indent-2.ql-direction-rtl.ql-align-right {
+         padding-right: 7.5em;
+         }
+         .ql-editor .ql-indent-3:not(.ql-direction-rtl) {
+         padding-left: 9em;
+         }
+         .ql-editor li.ql-indent-3:not(.ql-direction-rtl) {
+         padding-left: 10.5em;
+         }
+         .ql-editor .ql-indent-3.ql-direction-rtl.ql-align-right {
+         padding-right: 9em;
+         }
+         .ql-editor li.ql-indent-3.ql-direction-rtl.ql-align-right {
+         padding-right: 10.5em;
+         }
+         .ql-editor .ql-indent-4:not(.ql-direction-rtl) {
+         padding-left: 12em;
+         }
+         .ql-editor li.ql-indent-4:not(.ql-direction-rtl) {
+         padding-left: 13.5em;
+         }
+         .ql-editor .ql-indent-4.ql-direction-rtl.ql-align-right {
+         padding-right: 12em;
+         }
+         .ql-editor li.ql-indent-4.ql-direction-rtl.ql-align-right {
+         padding-right: 13.5em;
+         }
+         .ql-editor .ql-indent-5:not(.ql-direction-rtl) {
+         padding-left: 15em;
+         }
+         .ql-editor li.ql-indent-5:not(.ql-direction-rtl) {
+         padding-left: 16.5em;
+         }
+         .ql-editor .ql-indent-5.ql-direction-rtl.ql-align-right {
+         padding-right: 15em;
+         }
+         .ql-editor li.ql-indent-5.ql-direction-rtl.ql-align-right {
+         padding-right: 16.5em;
+         }
+         .ql-editor .ql-indent-6:not(.ql-direction-rtl) {
+         padding-left: 18em;
+         }
+         .ql-editor li.ql-indent-6:not(.ql-direction-rtl) {
+         padding-left: 19.5em;
+         }
+         .ql-editor .ql-indent-6.ql-direction-rtl.ql-align-right {
+         padding-right: 18em;
+         }
+         .ql-editor li.ql-indent-6.ql-direction-rtl.ql-align-right {
+         padding-right: 19.5em;
+         }
+         .ql-editor .ql-indent-7:not(.ql-direction-rtl) {
+         padding-left: 21em;
+         }
+         .ql-editor li.ql-indent-7:not(.ql-direction-rtl) {
+         padding-left: 22.5em;
+         }
+         .ql-editor .ql-indent-7.ql-direction-rtl.ql-align-right {
+         padding-right: 21em;
+         }
+         .ql-editor li.ql-indent-7.ql-direction-rtl.ql-align-right {
+         padding-right: 22.5em;
+         }
+         .ql-editor .ql-indent-8:not(.ql-direction-rtl) {
+         padding-left: 24em;
+         }
+         .ql-editor li.ql-indent-8:not(.ql-direction-rtl) {
+         padding-left: 25.5em;
+         }
+         .ql-editor .ql-indent-8.ql-direction-rtl.ql-align-right {
+         padding-right: 24em;
+         }
+         .ql-editor li.ql-indent-8.ql-direction-rtl.ql-align-right {
+         padding-right: 25.5em;
+         }
+         .ql-editor .ql-indent-9:not(.ql-direction-rtl) {
+         padding-left: 27em;
+         }
+         .ql-editor li.ql-indent-9:not(.ql-direction-rtl) {
+         padding-left: 28.5em;
+         }
+         .ql-editor .ql-indent-9.ql-direction-rtl.ql-align-right {
+         padding-right: 27em;
+         }
+         .ql-editor li.ql-indent-9.ql-direction-rtl.ql-align-right {
+         padding-right: 28.5em;
+         }
+         .ql-editor .ql-video {
+         display: block;
+         max-width: 100%;
+         }
+         .ql-editor .ql-video.ql-align-center {
+         margin: 0 auto;
+         }
+         .ql-editor .ql-video.ql-align-right {
+         margin: 0 0 0 auto;
+         }
+         .ql-editor .ql-bg-black {
+         background-color: #000;
+         }
+         .ql-editor .ql-bg-red {
+         background-color: #e60000;
+         }
+         .ql-editor .ql-bg-orange {
+         background-color: #f90;
+         }
+         .ql-editor .ql-bg-yellow {
+         background-color: #ff0;
+         }
+         .ql-editor .ql-bg-green {
+         background-color: #008a00;
+         }
+         .ql-editor .ql-bg-blue {
+         background-color: #06c;
+         }
+         .ql-editor .ql-bg-purple {
+         background-color: #93f;
+         }
+         .ql-editor .ql-color-white {
+         color: #fff;
+         }
+         .ql-editor .ql-color-red {
+         color: #e60000;
+         }
+         .ql-editor .ql-color-orange {
+         color: #f90;
+         }
+         .ql-editor .ql-color-yellow {
+         color: #ff0;
+         }
+         .ql-editor .ql-color-green {
+         color: #008a00;
+         }
+         .ql-editor .ql-color-blue {
+         color: #06c;
+         }
+         .ql-editor .ql-color-purple {
+         color: #93f;
+         }
+         .ql-editor .ql-font-serif {
+         font-family: Georgia, Times New Roman, serif;
+         }
+         .ql-editor .ql-font-monospace {
+         font-family: Monaco, Courier New, monospace;
+         }
+         .ql-editor .ql-size-small {
+         font-size: 0.75em;
+         }
+         .ql-editor .ql-size-large {
+         font-size: 1.5em;
+         }
+         .ql-editor .ql-size-huge {
+         font-size: 2.5em;
+         }
+         .ql-editor .ql-direction-rtl {
+         direction: rtl;
+         text-align: inherit;
+         }
+         .ql-editor .ql-align-center {
+         text-align: center;
+         }
+         .ql-editor .ql-align-justify {
+         text-align: justify;
+         }
+         .ql-editor .ql-align-right {
+         text-align: right;
+         }
+         .ql-editor .ql-embed-selected {
+         border: 1px solid #777;
+         user-select: none;
+         }
+         .ql-editor.ql-blank::before {
+         color: rgba(0,0,0,0.6);
+         content: attr(data-placeholder);
+         font-style: italic;
+         pointer-events: none;
+         position: absolute;
+         }
+         .ql-snow.ql-toolbar:after,
+         .ql-snow .ql-toolbar:after {
+         clear: both;
+         content: '';
+         display: table;
+         }
+         .ql-snow.ql-toolbar button,
+         .ql-snow .ql-toolbar button {
+         background: none;
+         border: none;
+         cursor: pointer;
+         display: inline-block;
+         float: left;
+         height: 24px;
+         padding: 3px 5px;
+         width: 28px;
+         margin: 0;
+         }
+         .ql-snow.ql-toolbar button svg,
+         .ql-snow .ql-toolbar button svg {
+         float: left;
+         height: 100%;
+         }
+         .ql-snow.ql-toolbar button:active:hover,
+         .ql-snow .ql-toolbar button:active:hover {
+         outline: none;
+         }
+         .ql-snow.ql-toolbar input.ql-image[type=file],
+         .ql-snow .ql-toolbar input.ql-image[type=file] {
+         display: none;
+         }
+         .ql-snow.ql-toolbar button:hover,
+         .ql-snow .ql-toolbar button:hover,
+         .ql-snow.ql-toolbar button:focus,
+         .ql-snow .ql-toolbar button:focus,
+         .ql-snow.ql-toolbar button.ql-active,
+         .ql-snow .ql-toolbar button.ql-active,
+         .ql-snow.ql-toolbar .ql-picker-label:hover,
+         .ql-snow .ql-toolbar .ql-picker-label:hover,
+         .ql-snow.ql-toolbar .ql-picker-label.ql-active,
+         .ql-snow .ql-toolbar .ql-picker-label.ql-active,
+         .ql-snow.ql-toolbar .ql-picker-item:hover,
+         .ql-snow .ql-toolbar .ql-picker-item:hover,
+         .ql-snow.ql-toolbar .ql-picker-item.ql-selected,
+         .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+         color: #06c;
+         }
+         .ql-snow.ql-toolbar button:hover .ql-fill,
+         .ql-snow .ql-toolbar button:hover .ql-fill,
+         .ql-snow.ql-toolbar button:focus .ql-fill,
+         .ql-snow .ql-toolbar button:focus .ql-fill,
+         .ql-snow.ql-toolbar button.ql-active .ql-fill,
+         .ql-snow .ql-toolbar button.ql-active .ql-fill,
+         .ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill,
+         .ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill,
+         .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,
+         .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill,
+         .ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill,
+         .ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill,
+         .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+         .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+         .ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill,
+         .ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill,
+         .ql-snow.ql-toolbar button:focus .ql-stroke.ql-fill,
+         .ql-snow .ql-toolbar button:focus .ql-stroke.ql-fill,
+         .ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill,
+         .ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill,
+         .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+         .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+         .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+         .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+         .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+         .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+         .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
+         .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill {
+         fill: #06c;
+         }
+         .ql-snow.ql-toolbar button:hover .ql-stroke,
+         .ql-snow .ql-toolbar button:hover .ql-stroke,
+         .ql-snow.ql-toolbar button:focus .ql-stroke,
+         .ql-snow .ql-toolbar button:focus .ql-stroke,
+         .ql-snow.ql-toolbar button.ql-active .ql-stroke,
+         .ql-snow .ql-toolbar button.ql-active .ql-stroke,
+         .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke,
+         .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke,
+         .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+         .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+         .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke,
+         .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke,
+         .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+         .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+         .ql-snow.ql-toolbar button:hover .ql-stroke-miter,
+         .ql-snow .ql-toolbar button:hover .ql-stroke-miter,
+         .ql-snow.ql-toolbar button:focus .ql-stroke-miter,
+         .ql-snow .ql-toolbar button:focus .ql-stroke-miter,
+         .ql-snow.ql-toolbar button.ql-active .ql-stroke-miter,
+         .ql-snow .ql-toolbar button.ql-active .ql-stroke-miter,
+         .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+         .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+         .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+         .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+         .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+         .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+         .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,
+         .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
+         stroke: #06c;
+         }
+         @media (pointer: coarse) {
+         .ql-snow.ql-toolbar button:hover:not(.ql-active),
+         .ql-snow .ql-toolbar button:hover:not(.ql-active) {
+         color: #444;
+         }
+         .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-fill,
+         .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-fill,
+         .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill,
+         .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill {
+         fill: #444;
+         }
+         .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke,
+         .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke,
+         .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter,
+         .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter {
+         stroke: #444;
+         }
+         }
+         .ql-snow {
+         box-sizing: border-box;
+         }
+         .ql-snow * {
+         box-sizing: border-box;
+         }
+         .ql-snow .ql-hidden {
+         display: none;
+         }
+         .ql-snow .ql-out-bottom,
+         .ql-snow .ql-out-top {
+         visibility: hidden;
+         }
+         .ql-snow .ql-tooltip {
+         position: absolute;
+         transform: translateY(10px);
+         }
+         .ql-snow .ql-tooltip a {
+         cursor: pointer;
+         text-decoration: none;
+         }
+         .ql-snow .ql-tooltip.ql-flip {
+         transform: translateY(-10px);
+         }
+         .ql-snow .ql-formats {
+         display: inline-block;
+         vertical-align: middle;
+         }
+         .ql-snow .ql-formats:after {
+         clear: both;
+         content: '';
+         display: table;
+         }
+         .ql-snow .ql-stroke {
+         fill: none;
+         stroke: #444;
+         stroke-linecap: round;
+         stroke-linejoin: round;
+         stroke-width: 2;
+         }
+         .ql-snow .ql-stroke-miter {
+         fill: none;
+         stroke: #444;
+         stroke-miterlimit: 10;
+         stroke-width: 2;
+         }
+         .ql-snow .ql-fill,
+         .ql-snow .ql-stroke.ql-fill {
+         fill: #444;
+         }
+         .ql-snow .ql-empty {
+         fill: none;
+         }
+         .ql-snow .ql-even {
+         fill-rule: evenodd;
+         }
+         .ql-snow .ql-thin,
+         .ql-snow .ql-stroke.ql-thin {
+         stroke-width: 1;
+         }
+         .ql-snow .ql-transparent {
+         opacity: 0.4;
+         }
+         .ql-snow .ql-direction svg:last-child {
+         display: none;
+         }
+         .ql-snow .ql-direction.ql-active svg:last-child {
+         display: inline;
+         }
+         .ql-snow .ql-direction.ql-active svg:first-child {
+         display: none;
+         }
+         .ql-snow .ql-editor h1 {
+         font-size: 2em;
+         font-weight: 600;
+         }
+         .ql-snow .ql-editor h2 {
+         font-size: 1.5em;
+         font-weight: 600;
+         }
+         .ql-snow .ql-editor h3 {
+         font-size: 1.17em;
+         font-weight: 600;
+         }
+         .ql-snow .ql-editor h4 {
+         font-size: 1em;
+         font-weight: 600;
+         }
+         .ql-snow .ql-editor h5 {
+         font-size: 0.83em;
+         font-weight: 600;
+         }
+         .ql-snow .ql-editor h6 {
+         font-size: 0.67em;
+         font-weight: 600;
+         }
+         .ql-snow .ql-editor a {
+         text-decoration: underline;
+         }
+         .ql-snow .ql-editor blockquote {
+         border-left: 4px solid #ccc;
+         margin-bottom: 5px;
+         margin-top: 5px;
+         padding-left: 16px;
+         }
+         .ql-snow .ql-editor code,
+         .ql-snow .ql-editor pre {
+         background-color: #f0f0f0;
+         border-radius: 3px;
+         }
+         .ql-snow .ql-editor pre {
+         white-space: pre-wrap;
+         margin-bottom: 5px;
+         margin-top: 5px;
+         padding: 5px 10px;
+         }
+         .ql-snow .ql-editor code {
+         font-size: 85%;
+         padding-bottom: 2px;
+         padding-top: 2px;
+         }
+         .ql-snow .ql-editor code:before,
+         .ql-snow .ql-editor code:after {
+         content: "\A0";
+         letter-spacing: -2px;
+         }
+         .ql-snow .ql-editor pre.ql-syntax {
+         background-color: #23241f;
+         color: #f8f8f2;
+         overflow: visible;
+         }
+         .ql-snow .ql-editor img {
+         max-width: 100%;
+         }
+         .ql-snow .ql-picker {
+         color: #444;
+         display: inline-block;
+         float: left;
+         font-size: 14px;
+         font-weight: 500;
+         height: 24px;
+         position: relative;
+         vertical-align: middle;
+         }
+         .ql-snow .ql-picker-label {
+         cursor: pointer;
+         display: inline-block;
+         height: 100%;
+         padding-left: 8px;
+         padding-right: 2px;
+         position: relative;
+         width: 100%;
+         }
+         .ql-snow .ql-picker-label::before {
+         display: inline-block;
+         line-height: 22px;
+         }
+         .ql-snow .ql-picker-options {
+         background-color: #fff;
+         display: none;
+         min-width: 100%;
+         padding: 4px 8px;
+         position: absolute;
+         white-space: nowrap;
+         }
+         .ql-snow .ql-picker-options .ql-picker-item {
+         cursor: pointer;
+         display: block;
+         padding-bottom: 5px;
+         padding-top: 5px;
+         }
+         .ql-snow .ql-picker.ql-expanded .ql-picker-label {
+         color: #ccc;
+         z-index: 2;
+         }
+         .ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-fill {
+         fill: #ccc;
+         }
+         .ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-stroke {
+         stroke: #ccc;
+         }
+         .ql-snow .ql-picker.ql-expanded .ql-picker-options {
+         display: block;
+         margin-top: -1px;
+         top: 100%;
+         z-index: 1;
+         }
+         .ql-snow .ql-color-picker,
+         .ql-snow .ql-icon-picker {
+         width: 28px;
+         }
+         .ql-snow .ql-color-picker .ql-picker-label,
+         .ql-snow .ql-icon-picker .ql-picker-label {
+         padding: 2px 4px;
+         }
+         .ql-snow .ql-color-picker .ql-picker-label svg,
+         .ql-snow .ql-icon-picker .ql-picker-label svg {
+         right: 4px;
+         }
+         .ql-snow .ql-icon-picker .ql-picker-options {
+         padding: 4px 0px;
+         }
+         .ql-snow .ql-icon-picker .ql-picker-item {
+         height: 24px;
+         width: 24px;
+         padding: 2px 4px;
+         }
+         .ql-snow .ql-color-picker .ql-picker-options {
+         padding: 3px 5px;
+         width: 152px;
+         }
+         .ql-snow .ql-color-picker .ql-picker-item {
+         border: 1px solid transparent;
+         float: left;
+         height: 16px;
+         margin: 2px;
+         padding: 0px;
+         width: 16px;
+         }
+         .ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+         position: absolute;
+         margin-top: -9px;
+         right: 0;
+         top: 50%;
+         width: 18px;
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-label[data-label]:not([data-label=''])::before,
+         .ql-snow .ql-picker.ql-font .ql-picker-label[data-label]:not([data-label=''])::before,
+         .ql-snow .ql-picker.ql-size .ql-picker-label[data-label]:not([data-label=''])::before,
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-label]:not([data-label=''])::before,
+         .ql-snow .ql-picker.ql-font .ql-picker-item[data-label]:not([data-label=''])::before,
+         .ql-snow .ql-picker.ql-size .ql-picker-item[data-label]:not([data-label=''])::before {
+         content: attr(data-label);
+         }
+         .ql-snow .ql-picker.ql-header {
+         width: 98px;
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-label::before,
+         .ql-snow .ql-picker.ql-header .ql-picker-item::before {
+         content: 'Normal';
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before,
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+         content: 'Heading 1';
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before,
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+         content: 'Heading 2';
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before,
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+         content: 'Heading 3';
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before,
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+         content: 'Heading 4';
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before,
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+         content: 'Heading 5';
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before,
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+         content: 'Heading 6';
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+         font-size: 2em;
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+         font-size: 1.5em;
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+         font-size: 1.17em;
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+         font-size: 1em;
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+         font-size: 0.83em;
+         }
+         .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+         font-size: 0.67em;
+         }
+         .ql-snow .ql-picker.ql-font {
+         width: 108px;
+         }
+         .ql-snow .ql-picker.ql-font .ql-picker-label::before,
+         .ql-snow .ql-picker.ql-font .ql-picker-item::before {
+         content: 'Sans Serif';
+         }
+         .ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serif]::before,
+         .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serif]::before {
+         content: 'Serif';
+         }
+         .ql-snow .ql-picker.ql-font .ql-picker-label[data-value=monospace]::before,
+         .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=monospace]::before {
+         content: 'Monospace';
+         }
+         .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serif]::before {
+         font-family: Georgia, Times New Roman, serif;
+         }
+         .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=monospace]::before {
+         font-family: Monaco, Courier New, monospace;
+         }
+         .ql-snow .ql-picker.ql-size {
+         width: 98px;
+         }
+         .ql-snow .ql-picker.ql-size .ql-picker-label::before,
+         .ql-snow .ql-picker.ql-size .ql-picker-item::before {
+         content: 'Normal';
+         }
+         .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=small]::before,
+         .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+         content: 'Small';
+         }
+         .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=large]::before,
+         .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+         content: 'Large';
+         }
+         .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=huge]::before,
+         .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+         content: 'Huge';
+         }
+         .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+         font-size: 10px;
+         }
+         .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+         font-size: 18px;
+         }
+         .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+         font-size: 32px;
+         }
+         .ql-snow .ql-color-picker.ql-background .ql-picker-item {
+         background-color: #fff;
+         }
+         .ql-snow .ql-color-picker.ql-color .ql-picker-item {
+         background-color: #000;
+         }
+         .ql-toolbar.ql-snow {
+         border-bottom: 1px solid #ECE9F2;
+         box-sizing: border-box;
+         font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+         padding: 8px;
+         }
+         .ql-toolbar.ql-snow .ql-formats {
+         margin-right: 15px;
+         }
+         .ql-toolbar.ql-snow .ql-picker-label {
+         border: 1px solid transparent;
+         }
+         .ql-toolbar.ql-snow .ql-picker-options {
+         border: 1px solid transparent;
+         box-shadow: rgba(0,0,0,0.2) 0 2px 8px;
+         }
+         .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+         border-color: #ccc;
+         }
+         .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+         border-color: #ccc;
+         }
+         .ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected,
+         .ql-toolbar.ql-snow .ql-color-picker .ql-picker-item:hover {
+         border-color: #000;
+         }
+         .ql-toolbar.ql-snow + .ql-container.ql-snow {
+         border-top: 0px;
+         padding-bottom: 40px;
+         }
+         .ql-snow .ql-tooltip {
+         background-color: #fff;
+         border: 1px solid #ccc;
+         box-shadow: 0px 0px 5px #ddd;
+         color: #444;
+         padding: 5px 12px;
+         white-space: nowrap;
+         }
+         .ql-snow .ql-tooltip::before {
+         content: "Visit URL:";
+         line-height: 26px;
+         margin-right: 8px;
+         }
+         .ql-snow .ql-tooltip input[type=text] {
+         display: none;
+         border: 1px solid #ccc;
+         font-size: 13px;
+         height: 26px;
+         margin: 0px;
+         padding: 3px 5px;
+         width: 170px;
+         }
+         .ql-snow .ql-tooltip a.ql-preview {
+         display: inline-block;
+         max-width: 200px;
+         overflow-x: hidden;
+         text-overflow: ellipsis;
+         vertical-align: top;
+         }
+         .ql-snow .ql-tooltip a.ql-action::after {
+         border-right: 1px solid #ccc;
+         content: 'Edit';
+         margin-left: 16px;
+         padding-right: 8px;
+         }
+         .ql-snow .ql-tooltip a.ql-remove::before {
+         content: 'Remove';
+         margin-left: 8px;
+         }
+         .ql-snow .ql-tooltip a {
+         line-height: 26px;
+         }
+         .ql-snow .ql-tooltip.ql-editing a.ql-preview,
+         .ql-snow .ql-tooltip.ql-editing a.ql-remove {
+         display: none;
+         }
+         .ql-snow .ql-tooltip.ql-editing input[type=text] {
+         display: inline-block;
+         }
+         .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+         border-right: 0px;
+         content: 'Save';
+         padding-right: 0px;
+         }
+         .ql-snow .ql-tooltip[data-mode=link]::before {
+         content: "Enter link:";
+         }
+         .ql-snow .ql-tooltip[data-mode=formula]::before {
+         content: "Enter formula:";
+         }
+         .ql-snow .ql-tooltip[data-mode=video]::before {
+         content: "Enter video:";
+         }
+         .ql-snow a {
+         color: #06c;
+         }
+      </style>
+      <style type="text/css">.PresetDateRangePicker_panel {
+         padding: 0 22px 11px
+         }
+         .PresetDateRangePicker_button {
+         position: relative;
+         height: 100%;
+         text-align: center;
+         background: 0 0;
+         border: 2px solid #00a699;
+         color: #00a699;
+         padding: 4px 12px;
+         margin-right: 8px;
+         font: inherit;
+         font-weight: 700;
+         line-height: normal;
+         overflow: visible;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         cursor: pointer
+         }
+         .PresetDateRangePicker_button:active {
+         outline: 0
+         }
+         .PresetDateRangePicker_button__selected {
+         color: #fff;
+         background: #00a699
+         }
+         .SingleDatePickerInput {
+         display: inline-block;
+         background-color: #fff
+         }
+         .SingleDatePickerInput__withBorder {
+         border: 1px solid #dbdbdb
+         }
+         .SingleDatePickerInput__rtl {
+         direction: rtl
+         }
+         .SingleDatePickerInput__disabled {
+         background-color: #f2f2f2
+         }
+         .SingleDatePickerInput__block {
+         display: block
+         }
+         .SingleDatePickerInput__showClearDate {
+         padding-right: 30px
+         }
+         .SingleDatePickerInput_clearDate {
+         background: 0 0;
+         border: 0;
+         color: inherit;
+         font: inherit;
+         line-height: normal;
+         overflow: visible;
+         cursor: pointer;
+         padding: 10px;
+         margin: 0 10px 0 5px;
+         position: absolute;
+         right: 0;
+         top: 50%;
+         -webkit-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+         transform: translateY(-50%)
+         }
+         .SingleDatePickerInput_clearDate__default:focus,
+         .SingleDatePickerInput_clearDate__default:hover {
+         background: #dbdbdb;
+         border-radius: 50%
+         }
+         .SingleDatePickerInput_clearDate__small {
+         padding: 6px
+         }
+         .SingleDatePickerInput_clearDate__hide {
+         visibility: hidden
+         }
+         .SingleDatePickerInput_clearDate_svg {
+         fill: #82888a;
+         height: 12px;
+         width: 15px;
+         vertical-align: middle
+         }
+         .SingleDatePickerInput_clearDate_svg__small {
+         height: 9px
+         }
+         .SingleDatePickerInput_calendarIcon {
+         background: 0 0;
+         border: 0;
+         color: inherit;
+         font: inherit;
+         line-height: normal;
+         overflow: visible;
+         cursor: pointer;
+         display: inline-block;
+         vertical-align: middle;
+         padding: 10px;
+         margin: 0 5px 0 10px
+         }
+         .SingleDatePickerInput_calendarIcon_svg {
+         fill: #82888a;
+         height: 15px;
+         width: 14px;
+         vertical-align: middle
+         }
+         .SingleDatePicker {
+         position: relative;
+         display: inline-block
+         }
+         .SingleDatePicker__block {
+         display: block
+         }
+         .SingleDatePicker_picker {
+         z-index: 1;
+         background-color: #fff;
+         position: absolute
+         }
+         .SingleDatePicker_picker__rtl {
+         direction: rtl
+         }
+         .SingleDatePicker_picker__directionLeft {
+         left: 0
+         }
+         .SingleDatePicker_picker__directionRight {
+         right: 0
+         }
+         .SingleDatePicker_picker__portal {
+         background-color: rgba(0,0,0,.3);
+         position: fixed;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%
+         }
+         .SingleDatePicker_picker__fullScreenPortal {
+         background-color: #fff
+         }
+         .SingleDatePicker_closeButton {
+         background: 0 0;
+         border: 0;
+         color: inherit;
+         font: inherit;
+         line-height: normal;
+         overflow: visible;
+         cursor: pointer;
+         position: absolute;
+         top: 0;
+         right: 0;
+         padding: 15px;
+         z-index: 2
+         }
+         .SingleDatePicker_closeButton:focus,
+         .SingleDatePicker_closeButton:hover {
+         color: darken(#cacccd,10%);
+         text-decoration: none
+         }
+         .SingleDatePicker_closeButton_svg {
+         height: 15px;
+         width: 15px;
+         fill: #cacccd
+         }
+         .DayPickerKeyboardShortcuts_buttonReset {
+         background: 0 0;
+         border: 0;
+         border-radius: 0;
+         color: inherit;
+         font: inherit;
+         line-height: normal;
+         overflow: visible;
+         padding: 0;
+         cursor: pointer;
+         font-size: 14px
+         }
+         .DayPickerKeyboardShortcuts_buttonReset:active {
+         outline: 0
+         }
+         .DayPickerKeyboardShortcuts_show {
+         width: 22px;
+         position: absolute;
+         z-index: 2
+         }
+         .DayPickerKeyboardShortcuts_show__bottomRight {
+         border-top: 26px solid transparent;
+         border-right: 33px solid #00a699;
+         bottom: 0;
+         right: 0
+         }
+         .DayPickerKeyboardShortcuts_show__bottomRight:hover {
+         border-right: 33px solid #008489
+         }
+         .DayPickerKeyboardShortcuts_show__topRight {
+         border-bottom: 26px solid transparent;
+         border-right: 33px solid #00a699;
+         top: 0;
+         right: 0
+         }
+         .DayPickerKeyboardShortcuts_show__topRight:hover {
+         border-right: 33px solid #008489
+         }
+         .DayPickerKeyboardShortcuts_show__topLeft {
+         border-bottom: 26px solid transparent;
+         border-left: 33px solid #00a699;
+         top: 0;
+         left: 0
+         }
+         .DayPickerKeyboardShortcuts_show__topLeft:hover {
+         border-left: 33px solid #008489
+         }
+         .DayPickerKeyboardShortcuts_showSpan {
+         color: #fff;
+         position: absolute
+         }
+         .DayPickerKeyboardShortcuts_showSpan__bottomRight {
+         bottom: 0;
+         right: -28px
+         }
+         .DayPickerKeyboardShortcuts_showSpan__topRight {
+         top: 1px;
+         right: -28px
+         }
+         .DayPickerKeyboardShortcuts_showSpan__topLeft {
+         top: 1px;
+         left: -28px
+         }
+         .DayPickerKeyboardShortcuts_panel {
+         overflow: auto;
+         background: #fff;
+         border: 1px solid #dbdbdb;
+         border-radius: 2px;
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         right: 0;
+         left: 0;
+         z-index: 2;
+         padding: 22px;
+         margin: 33px
+         }
+         .DayPickerKeyboardShortcuts_title {
+         font-size: 16px;
+         font-weight: 700;
+         margin: 0
+         }
+         .DayPickerKeyboardShortcuts_list {
+         list-style: none;
+         padding: 0;
+         font-size: 14px
+         }
+         .DayPickerKeyboardShortcuts_close {
+         position: absolute;
+         right: 22px;
+         top: 22px;
+         z-index: 2
+         }
+         .DayPickerKeyboardShortcuts_close:active {
+         outline: 0
+         }
+         .DayPickerKeyboardShortcuts_closeSvg {
+         height: 15px;
+         width: 15px;
+         fill: #cacccd
+         }
+         .DayPickerKeyboardShortcuts_closeSvg:focus,
+         .DayPickerKeyboardShortcuts_closeSvg:hover {
+         fill: #82888a
+         }
+         .CalendarDay {
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         cursor: pointer;
+         font-size: 14px;
+         text-align: center
+         }
+         .CalendarDay:active {
+         outline: 0
+         }
+         .CalendarDay__defaultCursor {
+         cursor: default
+         }
+         .CalendarDay__default {
+         border: 1px solid #e4e7e7;
+         color: #484848;
+         background: #fff
+         }
+         .CalendarDay__default:hover {
+         background: #e4e7e7;
+         border: 1px double #e4e7e7;
+         color: inherit
+         }
+         .CalendarDay__hovered_offset {
+         background: #f4f5f5;
+         border: 1px double #e4e7e7;
+         color: inherit
+         }
+         .CalendarDay__outside {
+         border: 0;
+         background: #fff;
+         color: #484848
+         }
+         .CalendarDay__blocked_minimum_nights {
+         background: #fff;
+         border: 1px solid #eceeee;
+         color: #cacccd
+         }
+         .CalendarDay__blocked_minimum_nights:active,
+         .CalendarDay__blocked_minimum_nights:hover {
+         background: #fff;
+         color: #cacccd
+         }
+         .CalendarDay__highlighted_calendar {
+         background: #ffe8bc;
+         color: #484848
+         }
+         .CalendarDay__highlighted_calendar:active,
+         .CalendarDay__highlighted_calendar:hover {
+         background: #ffce71;
+         color: #484848
+         }
+         .CalendarDay__selected_span {
+         background: #66e2da;
+         border: 1px solid #33dacd;
+         color: #fff
+         }
+         .CalendarDay__selected_span:active,
+         .CalendarDay__selected_span:hover {
+         background: #33dacd;
+         border: 1px solid #33dacd;
+         color: #fff
+         }
+         .CalendarDay__last_in_range {
+         border-right: #00a699
+         }
+         .CalendarDay__selected,
+         .CalendarDay__selected:active,
+         .CalendarDay__selected:hover {
+         background: #00a699;
+         border: 1px solid #00a699;
+         color: #fff
+         }
+         .CalendarDay__hovered_span,
+         .CalendarDay__hovered_span:hover {
+         background: #b2f1ec;
+         border: 1px solid #80e8e0;
+         color: #007a87
+         }
+         .CalendarDay__hovered_span:active {
+         background: #80e8e0;
+         border: 1px solid #80e8e0;
+         color: #007a87
+         }
+         .CalendarDay__blocked_calendar,
+         .CalendarDay__blocked_calendar:active,
+         .CalendarDay__blocked_calendar:hover {
+         background: #cacccd;
+         border: 1px solid #cacccd;
+         color: #82888a
+         }
+         .CalendarDay__blocked_out_of_range,
+         .CalendarDay__blocked_out_of_range:active,
+         .CalendarDay__blocked_out_of_range:hover {
+         background: #fff;
+         border: 1px solid #e4e7e7;
+         color: #cacccd
+         }
+         .CalendarMonth {
+         background: #fff;
+         text-align: center;
+         padding: 0 13px;
+         vertical-align: top;
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none
+         }
+         .CalendarMonth_table {
+         border-collapse: collapse;
+         border-spacing: 0
+         }
+         .CalendarMonth_verticalSpacing {
+         border-collapse: separate
+         }
+         .CalendarMonth_caption {
+         color: #484848;
+         font-size: 18px;
+         text-align: center;
+         padding-top: 22px;
+         padding-bottom: 37px;
+         caption-side: initial
+         }
+         .CalendarMonth_caption__verticalScrollable {
+         padding-top: 12px;
+         padding-bottom: 7px
+         }
+         .CalendarMonthGrid {
+         background: #fff;
+         text-align: left;
+         z-index: 0
+         }
+         .CalendarMonthGrid__animating {
+         z-index: 1
+         }
+         .CalendarMonthGrid__horizontal {
+         position: absolute;
+         left: 9px
+         }
+         .CalendarMonthGrid__vertical {
+         margin: 0 auto
+         }
+         .CalendarMonthGrid__vertical_scrollable {
+         margin: 0 auto;
+         overflow-y: scroll
+         }
+         .CalendarMonthGrid_month__horizontal {
+         display: inline-block;
+         vertical-align: top;
+         min-height: 100%
+         }
+         .CalendarMonthGrid_month__hideForAnimation {
+         position: absolute;
+         z-index: -1;
+         opacity: 0;
+         pointer-events: none
+         }
+         .CalendarMonthGrid_month__hidden {
+         visibility: hidden
+         }
+         .DayPickerNavigation_container {
+         position: relative;
+         z-index: 2
+         }
+         .DayPickerNavigation_container__vertical {
+         background: #fff;
+         box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         height: 52px;
+         width: 100%
+         }
+         .DayPickerNavigation_container__verticalScrollable {
+         position: relative
+         }
+         .DayPickerNavigation_button {
+         cursor: pointer;
+         line-height: .78;
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none
+         }
+         .DayPickerNavigation_button__default {
+         border: 1px solid #e4e7e7;
+         background-color: #fff;
+         color: #757575
+         }
+         .DayPickerNavigation_button__default:focus,
+         .DayPickerNavigation_button__default:hover {
+         border: 1px solid #c4c4c4
+         }
+         .DayPickerNavigation_button__default:active {
+         background: #f2f2f2
+         }
+         .DayPickerNavigation_button__horizontal {
+         border-radius: 3px;
+         padding: 6px 9px;
+         top: 18px;
+         position: absolute
+         }
+         .DayPickerNavigation_leftButton__horizontal {
+         left: 22px
+         }
+         .DayPickerNavigation_rightButton__horizontal {
+         right: 22px
+         }
+         .DayPickerNavigation_button__vertical {
+         display: inline-block;
+         position: relative;
+         height: 100%;
+         width: 50%
+         }
+         .DayPickerNavigation_button__vertical__default {
+         padding: 5px
+         }
+         .DayPickerNavigation_nextButton__vertical__default {
+         border-left: 0
+         }
+         .DayPickerNavigation_nextButton__verticalScrollable {
+         width: 100%
+         }
+         .DayPickerNavigation_svg__horizontal {
+         height: 19px;
+         width: 19px;
+         fill: #82888a
+         }
+         .DayPickerNavigation_svg__vertical {
+         height: 42px;
+         width: 42px;
+         fill: #484848
+         }
+         .DayPicker {
+         background: #fff;
+         position: relative;
+         text-align: left
+         }
+         .DayPicker__horizontal {
+         background: #fff
+         }
+         .DayPicker__verticalScrollable {
+         height: 100%
+         }
+         .DayPicker__hidden {
+         visibility: hidden
+         }
+         .DayPicker__withBorder {
+         box-shadow: 0 2px 6px rgba(0,0,0,.05),0 0 0 1px rgba(0,0,0,.07);
+         border-radius: 3px
+         }
+         .DayPicker_portal__horizontal {
+         box-shadow: none;
+         position: absolute;
+         left: 50%;
+         top: 50%
+         }
+         .DayPicker_portal__vertical {
+         position: initial
+         }
+         .DayPicker_focusRegion {
+         outline: 0
+         }
+         .DayPicker_calendarInfo__horizontal,
+         .DayPicker_wrapper__horizontal {
+         display: inline-block;
+         vertical-align: top
+         }
+         .DayPicker_weekHeaders {
+         position: relative
+         }
+         .DayPicker_weekHeaders__horizontal {
+         margin-left: 9px
+         }
+         .DayPicker_weekHeader {
+         color: #757575;
+         position: absolute;
+         top: 62px;
+         z-index: 2;
+         padding: 0 13px;
+         text-align: left
+         }
+         .DayPicker_weekHeader__vertical {
+         left: 50%
+         }
+         .DayPicker_weekHeader__verticalScrollable {
+         top: 0;
+         display: table-row;
+         border-bottom: 1px solid #dbdbdb;
+         background: #fff;
+         margin-left: 0;
+         left: 0;
+         width: 100%;
+         text-align: center
+         }
+         .DayPicker_weekHeader_ul {
+         list-style: none;
+         margin: 1px 0;
+         padding-left: 0;
+         padding-right: 0;
+         font-size: 14px
+         }
+         .DayPicker_weekHeader_li {
+         display: inline-block;
+         text-align: center
+         }
+         .DayPicker_transitionContainer {
+         position: relative;
+         overflow: hidden;
+         border-radius: 3px
+         }
+         .DayPicker_transitionContainer__horizontal {
+         -webkit-transition: height .2s ease-in-out;
+         -moz-transition: height .2s ease-in-out;
+         transition: height .2s ease-in-out
+         }
+         .DayPicker_transitionContainer__vertical {
+         width: 100%
+         }
+         .DayPicker_transitionContainer__verticalScrollable {
+         padding-top: 20px;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         right: 0;
+         left: 0;
+         overflow-y: scroll
+         }
+         .DateInput {
+         margin: 0;
+         padding: 0;
+         background: #fff;
+         position: relative;
+         display: inline-block;
+         width: 130px;
+         vertical-align: middle
+         }
+         .DateInput__small {
+         width: 97px
+         }
+         .DateInput__block {
+         width: 100%
+         }
+         .DateInput__disabled {
+         background: #f2f2f2;
+         color: #dbdbdb
+         }
+         .DateInput_input {
+         font-weight: 200;
+         font-size: 19px;
+         line-height: 24px;
+         color: #484848;
+         background-color: #fff;
+         width: 100%;
+         padding: 11px 11px 9px;
+         border: 0;
+         border-top: 0;
+         border-right: 0;
+         border-bottom: 2px solid transparent;
+         border-left: 0;
+         border-radius: 0
+         }
+         .DateInput_input__small {
+         font-size: 15px;
+         line-height: 18px;
+         letter-spacing: .2px;
+         padding: 7px 7px 5px
+         }
+         .DateInput_input__regular {
+         font-weight: auto
+         }
+         .DateInput_input__readOnly {
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none
+         }
+         .DateInput_input__focused {
+         outline: 0;
+         background: #fff;
+         border: 0;
+         border-top: 0;
+         border-right: 0;
+         border-bottom: 2px solid #008489;
+         border-left: 0
+         }
+         .DateInput_input__disabled {
+         background: #f2f2f2;
+         font-style: italic
+         }
+         .DateInput_screenReaderMessage {
+         border: 0;
+         clip: rect(0,0,0,0);
+         height: 1px;
+         margin: -1px;
+         overflow: hidden;
+         padding: 0;
+         position: absolute;
+         width: 1px
+         }
+         .DateInput_fang {
+         position: absolute;
+         width: 20px;
+         height: 10px;
+         left: 22px;
+         z-index: 2
+         }
+         .DateInput_fangShape {
+         fill: #fff
+         }
+         .DateInput_fangStroke {
+         stroke: #dbdbdb;
+         fill: transparent
+         }
+         .DateRangePickerInput {
+         background-color: #fff;
+         display: inline-block
+         }
+         .DateRangePickerInput__disabled {
+         background: #f2f2f2
+         }
+         .DateRangePickerInput__withBorder {
+         border: 1px solid #dbdbdb;
+         border-radius: 2px
+         }
+         .DateRangePickerInput__rtl {
+         direction: rtl
+         }
+         .DateRangePickerInput__block {
+         display: block
+         }
+         .DateRangePickerInput__showClearDates {
+         padding-right: 30px
+         }
+         .DateRangePickerInput_arrow {
+         display: inline-block;
+         vertical-align: middle;
+         color: #484848
+         }
+         .DateRangePickerInput_arrow_svg {
+         vertical-align: middle;
+         fill: #484848;
+         height: 24px;
+         width: 24px
+         }
+         .DateRangePickerInput_clearDates {
+         background: 0 0;
+         border: 0;
+         color: inherit;
+         font: inherit;
+         line-height: normal;
+         overflow: visible;
+         cursor: pointer;
+         padding: 10px;
+         margin: 0 10px 0 5px;
+         position: absolute;
+         right: 0;
+         top: 50%;
+         -webkit-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+         transform: translateY(-50%)
+         }
+         .DateRangePickerInput_clearDates__small {
+         padding: 6px
+         }
+         .DateRangePickerInput_clearDates_default:focus,
+         .DateRangePickerInput_clearDates_default:hover {
+         background: #dbdbdb;
+         border-radius: 50%
+         }
+         .DateRangePickerInput_clearDates__hide {
+         visibility: hidden
+         }
+         .DateRangePickerInput_clearDates_svg {
+         fill: #82888a;
+         height: 12px;
+         width: 15px;
+         vertical-align: middle
+         }
+         .DateRangePickerInput_clearDates_svg__small {
+         height: 9px
+         }
+         .DateRangePickerInput_calendarIcon {
+         background: 0 0;
+         border: 0;
+         color: inherit;
+         font: inherit;
+         line-height: normal;
+         overflow: visible;
+         cursor: pointer;
+         display: inline-block;
+         vertical-align: middle;
+         padding: 10px;
+         margin: 0 5px 0 10px
+         }
+         .DateRangePickerInput_calendarIcon_svg {
+         fill: #82888a;
+         height: 15px;
+         width: 14px;
+         vertical-align: middle
+         }
+         .DateRangePicker {
+         position: relative;
+         display: inline-block
+         }
+         .DateRangePicker__block {
+         display: block
+         }
+         .DateRangePicker_picker {
+         z-index: 1;
+         background-color: #fff;
+         position: absolute
+         }
+         .DateRangePicker_picker__rtl {
+         direction: rtl
+         }
+         .DateRangePicker_picker__directionLeft {
+         left: 0
+         }
+         .DateRangePicker_picker__directionRight {
+         right: 0
+         }
+         .DateRangePicker_picker__portal {
+         background-color: rgba(0,0,0,.3);
+         position: fixed;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%
+         }
+         .DateRangePicker_picker__fullScreenPortal {
+         background-color: #fff
+         }
+         .DateRangePicker_closeButton {
+         background: 0 0;
+         border: 0;
+         color: inherit;
+         font: inherit;
+         line-height: normal;
+         overflow: visible;
+         cursor: pointer;
+         position: absolute;
+         top: 0;
+         right: 0;
+         padding: 15px;
+         z-index: 2
+         }
+         .DateRangePicker_closeButton:focus,
+         .DateRangePicker_closeButton:hover {
+         color: darken(#cacccd,10%);
+         text-decoration: none
+         }
+         .DateRangePicker_closeButton_svg {
+         height: 15px;
+         width: 15px;
+         fill: #cacccd
+         }
+      </style>
+      <style type="text/css">.CalendarDay__highlighted_calendar {
+         background-color: #82E0AA;
+         color: #186A3B;
+         }
+         .CalendarDay__highlighted_calendar:hover {
+         background-color: #58D68D;
+         color: #186A3B;
+         }
+         .CalendarDay__highlighted_calendar:active {
+         background-color: #58D68D;
+         color: #186A3B;
+         }
+         .CalendarDay__selected, .CalendarDay__selected:hover {
+         background-color: #8C35FF !important;
+         border: 1px solid #8C35FF !important;
+         color: #fff !important;
+         }
+         .CalendarDay__selected_span {
+         background-color: #AA6AFF !important;
+         border: 1px solid #8C35FF !important;
+         color: #fff !important;
+         }
+         .CalendarDay__selected_span:hover {
+         background-color: #A159FF !important;
+         border: 1px solid #8C35FF !important;
+         color: #fff !important;
+         }
+         .CalendarMonth_caption {
+         color: #180045;
+         font-size: 16px;
+         padding-bottom: 42px;
+         }
+         .CalendarDay__hovered_span {
+         background-color: #DABEFF !important;
+         border: 1px solid #BE91FA !important;
+         color: #5A32AD !important;
+         }
+         .CalendarDay__hovered_span:hover {
+         background-color: #904DE9 !important;
+         border: 1px solid #904DE9 !important;
+         color: white !important;
+         }
+         .CalendarDay__default:hover {
+         background-color: #DAD4E3;
+         }
+         .CalendarDay__default {
+         color: #796F8D;
+         }
+         .CalendarDay__blocked_out_of_range, .CalendarDay__blocked_out_of_range:active, .CalendarDay__blocked_out_of_range:hover {
+         color: #DAD4E3;
+         }
+         .DateRangePickerInput_arrow_svg {
+         display: none
+         }
+         .DateInput {
+         margin: 0 4px 0 0;
+         }
+         .DateRangePicker_picker {
+         top: 50px !important;
+         }
+         .DateInput_fang {
+         top: 40px !important;
+         }
+         .DateInput_fangStroke {
+         stroke: none;
+         }
+         .DateInput_input {
+         margin: 0;
+         font-weight: 400;
+         font-size: 14px;
+         color: #180045;
+         padding: 3px 8px;
+         border: 1px solid rgba(25, 4, 69, 0.1);
+         border-radius: 4px;
+         cursor: pointer;
+         box-shadow: rgba(25, 4, 69, 0.05) 0px 0px 10px;
+         }
+         .DateInput_input:hover {
+         border: 1px solid rgba(140, 53, 255, 0.4);
+         }
+         .DateInput_input:focus {
+         border: 1px solid rgba(140, 53, 255, 0.7);
+         }
+         .DayPicker__withBorder {
+         box-shadow: rgba(25, 4, 69, 0.1) 0px 0px 20px;
+         }
+         .DayPickerNavigation_button__default {
+         width: auto;
+         }
+         .DateInput_input__focused {
+         border-bottom: 1px solid rgba(25, 4, 69, 0.1);
+         }
+      </style>
+      <style type="text/css">:root topadblock, :root td[valign="top"] > .mainmenu[style="padding:10px 0 0 0 !important;"], :root input[onclick^="window.open('http://www.friendlyduck.com/"], :root img[alt^="Fuckbook"], :root iframe[src^="http://cdn1.adexprt.com/"], :root iframe[src^="http://ad.yieldmanager.com/"], :root header#hdr + #main > div[data-hveid], :root div[role="navigation"] + c-wiz > script + div > .kxhcC, :root div[id^="mainads"], :root div[id^="dmRosAdWrapper"], :root div[id^="div-ads-"], :root iframe[id^="google_ads_iframe"], :root div[id^="crt-"][style], :root div[id^="cns_ads_"], :root div[id^="adspot-"], :root div[id^="tms-ad-dfp-"], :root div[id^="ads300_250-widget"], :root div[id^="ads250_250-widget"], :root div[id^="adrotate_widgets-"], :root div[id^="adfox_"], :root div[id^="ad_script_"], :root div[id^="ad_bigbox_"], :root div[id^="ad-server-"], :root div[id^="acm-ad-tag-"], :root div[id^="MarketGid"], :root div[id^="ADV-SLOT-"], :root div[data-native_ad], :root div[class^="proadszone-"], :root div[class^="pane-google-admanager-"], :root div[class^="index_displayAd_"], :root div[class^="index_adBeforeContent_"], :root div[class^="index_adAfterContent_"], :root div[class^="block-openx-"], :root div[class^="ads-partner-"], :root div[class^="ad_position_"], :root div[class^="ad_border_"], :root div[class^="Ad__container"], :root div[id^="div-adtech-ad-"], :root div[class*="_AdInArticle_"], :root div > [class][onclick*=".updateAnalyticsEvents"], :root bottomadblock, :root aside[itemtype="https://schema.org/WPAdBlock"], :root aside[id^="div-gpt-ad"], :root div[id^="ad-cid-"], :root aside[id^="advads_ad_widget-"], :root aside[id^="adrotate_widgets-"], :root a[target="_blank"][href^="http://api.taboola.com/"], :root a[style="display:block;width:300px;min-height:250px"][href^="http://li.cnet.com/click?"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='http://staffpicks.outbrain.com/network/redir?"][target="_blank"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='/wp-content/embed-ad-content/"], :root div[class^="Ad__bigBox"], :root a[onclick*="//m.economictimes.com/etmack/click.htm"], :root a[href^="https://www.share-online.biz/affiliate/"], :root a[href^="https://www.moscarossa.biz/"], :root a[href^="https://www.incontri-matura.com/"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root a[href^="https://www.firstload.com/affiliate/"], :root a[href^="https://www.camyou.com/?cam="][href*="&track="], :root a[href^="https://www.bebi.com"], :root a[href^="https://www.adskeeper.co.uk/"], :root div[id^="ad-gpt-"], :root a[href^="https://windscribe.com/promo/"], :root a[href^="https://vodexor.us/"], :root a[href^="https://trust.zone/go/r.php?RID="], :root a[href^="https://traffic.bannerator.com/"], :root a[href^="https://tracking.truthfinder.com/?a="], :root a[href^="https://track.healthtrader.com/"], :root a[href^="https://track.clickmoi.xyz/"], :root a[href^="https://track.adform.net/"], :root a[href^="https://track.52zxzh.com/"], :root div[class^="gemini-ad"], :root a[href^="https://torguard.net/aff.php"], :root a[href^="https://t.mobtya.com/"], :root aside[id^="tn_ads_widget-"], :root a[href^="https://syndication.exoclick.com/splash.php?"], :root div[id^="YFBMSN"], :root a[href^="https://secure.eveonline.com/ft/?aid="], :root div[id^="zergnet-widget"], :root a[href^="https://rev.adsession.com/"], :root a[href^="https://redirect.ero-advertising.com/"], :root a[href^="https://www.pornhat.com/"][rel="nofollow"], :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"], :root a[href^="https://mk-cdn.net/"], :root div[id^="proadszone-"], :root a[href^="https://mk-ads.com/"], :root a[href^="https://members.linkifier.com/public/affiliateLanding?refCode="], :root a[href^="https://medleyads.com/"], :root iframe[src^="http://cdn2.adexprt.com/"], :root div[id^="ads300_100-widget"], :root a[href^="https://lingthatsparleso.info/"], :root a[href^="https://land.rk.com/landing/"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://jmp.awempire.com/"], :root a[href^="https://incisivetrk.cvtr.io/click?"], :root a[href^="https://iactrivago.ampxdirect.com/"], :root a[onmousedown^="this.href='http://staffpicks.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="https://googleads.g.doubleclick.net/pcs/click"], :root a[href^="https://gogoman.me/"], :root a[href^="https://go.stripchat.com/"][href*="&campaignId="], :root div[class^="BlockAdvert-"], :root a[href^="https://go.onclasrv.com/"], :root a[href^="https://go.ad2up.com/"], :root a[href^="https://freeadult.games/"], :root a[href^="https://flirtaescopa.com/"], :root a[href^="https://farm.plista.com/pets"], :root a[href^="https://evaporate.pw/"], :root div[class^="local-feed-banner-ads"], :root a[href^="https://djtcollectorclub.org/"][href*="?affiliate_id="], :root a[href^="https://click.plista.com/pets"], :root a[href^="https://chaturbate.xyz/"], :root a[href^="https://chaturbate.jjgirls.com/"][href*="?tour="], :root a[href^="https://chaturbate.com/in/?tour="], :root a[href^="https://chaturbate.com/affiliates/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href^="https://awentw.com/"], :root a[href^="https://servedbyadbutler.com/"], :root a[href^="https://affiliates.bet-at-home.com/processing/"], :root a[href^="https://adswick.com/"], :root a[href^="https://adserver.adreactor.com/"], :root a[href^="https://refpaano.host/"], :root a[href^="https://adhealers.com/"], :root a[href^="https://ad.atdmt.com/"], :root a[href^="https://aaucwbe.com/"], :root a[href^="https://a.adtng.com/"], :root a[href^="http://xtgem.com/click?"], :root a[href^="https://ads.trafficpoizon.com/"], :root a[href^="http://wxdownloadmanager.com/dl/"], :root a[href^="http://www.zergnet.com/i/"], :root a[href^="http://www.usearchmedia.com/signup?"], :root a[href^="http://www.torntv-downloader.com/"], :root a[href^="http://www.tirerack.com/affiliates/"], :root a[href^="http://www.text-link-ads.com/"], :root div[id^="div_openx_ad_"], :root a[href^="http://www.streamate.com/exports/"], :root a[href^="http://www.sfippa.com/"], :root a[href^="http://www.xmediaserve.com/"], :root a[href^="http://www.sex.com/videos/?utm_"], :root a[href^="http://www.sex.com/?utm_"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="http://www.roboform.com/php/land.php"], :root a[href^="http://www.quick-torrent.com/download.html?aff"], :root a[href^="http://www.pinkvisualgames.com/?revid="], :root a[href^="http://www.paddypower.com/?AFF_ID="], :root div[data-spotim-slot], :root a[href^="http://www.mysuperpharm.com/"], :root a[href^="http://www.myfreepaysite.com/sfw_int.php?aid"], :root a[href^="http://www.myfreepaysite.com/sfw.php?aid"], :root a[href^="http://www.myfreecams.com/?co_id="][href*="&track="], :root a[href^="http://www.moneyducks.com/"], :root a[href^="http://www.menaon.com/installs/"], :root a[href^="http://www.securegfm.com/"], :root a[href^="http://www.liversely.net/"], :root a[href^="http://www.linkbucks.com/referral/"], :root a[href^="http://www.ireel.com/signup?ref"], :root a[href^="http://www.incredimail.com/?id="], :root a[href^="http://www.idownloadplay.com/"], :root a[href^="http://www.hitcpm.com/"], :root a[href^="http://www.greenmangaming.com/?tap_a="], :root a[href^="http://www.gamebookers.com/cgi-bin/intro.cgi?"], :root a[href^="http://www.friendlyquacks.com/"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="http://www.fpcTraffic2.com/blind/in.cgi?"], :root a[href^="http://www.fonts.com/BannerScript/"], :root a[href^="http://www.fleshlight.com/"], :root a[href^="http://www.flashx.tv/downloadthis"], :root a[href^="http://www.firstload.de/affiliate/"], :root a[href^="http://www.fducks.com/"], :root a[href^="http://www.faceporn.net/free?"], :root a[href^="http://www.epicgameads.com/"], :root a[href^="http://www.easydownloadnow.com/"], :root a[href^="http://www.duckssolutions.com/"], :root a[href^="https://go.trkclick2.com/"], :root a[href^="http://www.duckcash.eu/"], :root a[href^="http://www.drowle.com/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="http://www.downloadweb.org/"], :root a[href^="http://www.installads.net/"], :root a[href^="http://www.download-provider.org/"], :root a[href^="http://www.down1oads.com/"], :root iframe[id^="google_ads_frame"], :root a[href^="http://www.dealcent.com/register.php?affid="], :root a[href^="http://www.clkads.com/adServe/"], :root a[href^="http://www.clickansave.net/"], :root a[href^="http://www.cash-duck.com/"], :root a[href^="http://www.bitlord.me/share/"], :root a[href^="http://www.bet365.com/"][href*="?affiliate="], :root a[href^="http://www.bet365.com/"][href*="&affiliate="], :root a[href^="http://www.badoink.com/go.php?"], :root div[id^="yandex_ad"], :root a[href^="http://www.richducks.com/"], :root a[href^="http://www.babylon.com/welcome/index?affID"], :root a[href^="http://www.sexgangsters.com/?pid="], :root a[href^="http://www.amazon.co.uk/exec/obidos/external-search?"], :root a[href^="http://www.socialsex.com/"], :root a[href^="http://www.affbuzzads.com/affiliate/"], :root a[href^="https://www.camsoda.com/enter.php?id="], :root a[href^="http://www.afco2go.com/srv.php?"], :root a[href^="http://www.adxpansion.com"], :root div[id^="advads-"], :root a[href^="http://www.ringtonematcher.com/"], :root a[href^="http://www.adshost2.com/"], :root a[href^="http://www.ragazzeinvendita.com/?rcid="], :root a[href^="http://www.adbrite.com/mb/commerce/purchase_form.php?"], :root a[href^="http://www.TwinPlan.com/AF_"], :root a[href^="https://porndeals.com/?track="], :root a[href^="http://www.1clickmoviedownloader.info/"], :root div[class^="adbanner_"], :root a[href^="http://www.brightwheel.info/"], :root a[href^="http://www.1clickdownloader.com/"], :root a[href^="http://www.123-reg.co.uk/affiliate2.cgi"], :root div[id^="lazyad-"], :root a[href^="http://wopertific.info/"], :root a[href^="http://wgpartner.com/"], :root a[href^="http://webgirlz.online/landing/"], :root div[id^="ads300_600-widget"], :root div[class^="Ad__adContainer"], :root a[href^="http://web.adblade.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="http://us.marketgid.com"], :root a[href^="http://www.freefilesdownloader.com/"], :root a[href^="http://ul.to/ref/"], :root a[href^="http://trk.mdrtrck.com/"], :root div[id^="div_ad_stack_"], :root a[href^="http://traffic.tc-clicks.com/"], :root a[href^="http://www.graboid.com/affiliates/"], :root a[href^="http://tracking.toroadvertising.com/"], :root a[href^="http://www.liutilities.com/"], :root a[href^="http://www.dl-provider.com/search/"], :root a[href^="http://tracking.deltamediallc.com/"], :root a[href^="https://www.popads.net/users/"], :root a[href^="https://sexdatingz.live/"], :root a[href^="https://adultfriendfinder.com/go/page/landing"], :root a[href^="http://tracking.crazylead.com/"], :root div[role="navigation"] + c-wiz > div > .kxhcC, :root a[href^="http://tracker.mybroadband.co.za/"], :root a[href^="http://track.adform.net/"], :root a[href^="http://tour.affbuzzads.com/"], :root a[href^="https://iac.ampxdirect.com/"], :root a[href^="http://t.mdn2015x3.com/"], :root a[href^="http://steel.starflavor.bid/"], :root a[href^="http://stateresolver.link/"], :root a[href^="http://sharesuper.info/"], :root a[href^="http://getlinksinaseconds.com/"], :root a[href^="http://secure.signup-way.com/"], :root a[href*=".clkcln.com/"], :root a[href^="http://secure.signup-page.com/"], :root [onclick^="window.open('http://adultfriendfinder.com/search/"], :root a[href^="http://secure.hostgator.com/~affiliat/"], :root a[href^="http://uploaded.net/ref/"], :root a[href^="http://s9kkremkr0.com/"], :root a[href*="/cmd.php?ad="], :root a[href^="http://refpaano.host/"], :root a[href^="http://record.commissionking.com/"], :root div[class*="-storyBodyAd-"], :root a[href^="http://record.betsafe.com/"], :root a[href^="http://websitedhoome.com/"], :root a[href^="http://see-work.info/"], :root a[href^="http://prousa.work/"], :root a[href^="http://gca.sh/user/register?ref="], :root a[href^="http://promos.bwin.com/"], :root a[href^="http://prochina.link/"], :root a[href^="http://z1.zedo.com/"], :root a[href^="http://pokershibes.com/index.php?ref="], :root a[href^="http://mojofun.info/"], :root a[href^="http://mmo123.co/"], :root a[href^="http://media.paddypower.com/redirect.aspx?"], :root a[href*=".qertewrt.com/"], :root a[href^="http://lp.ncdownloader.com/"], :root #rhs_block .xpdopen > ._OKe > div > .mod > ._yYf, :root a[href^="http://lp.ezdownloadpro.info/"], :root a[href^="https://track.trkinator.com/"], :root a[href^="https://ads.ad4game.com/"], :root a[href*="/adServe/banners?"], :root a[href^="http://liversely.com/"], :root a[href^="http://feeds1.validclick.com/"], :root a[href^="http://latestdownloads.net/download.php?"], :root a[href^="http://keep2share.cc/pr/"], :root div[data-ad-underplayer], :root a[href^="http://k2s.cc/code/"], :root a[href*=".bang.com/"][href*="&aff="], :root a[href^="http://join3.bannedsextapes.com/track/"], :root a[href^="https://secure.bstlnk.com/"], :root a[href^="http://green.trafficinvest.com/"], :root a[href^="http://jobitem.org/"], :root a[href^="//adbit.co/?a=Advertise&"], :root a[href^="http://istri.it/?"], :root a[href^="http://www.fbooksluts.com/"], :root a[href^="http://www.cdjapan.co.jp/aff/click.cgi/"], :root a[href^="http://c.actiondesk.com/"], :root a[href^="http://intent.bingads.com/"], :root a[href^="http://igromir.info/"], :root a[href^="http://cdn.adstract.com/"], :root a[href^="http://hyperlinksecure.com/go/"], :root a[href^="http://45eijvhgj2.com/"], :root a[href^="http://hpn.houzz.com/"], :root a[href^="//look.djfiln.com/"], :root a[href^="http://greensmoke.com/"], :root a[href^="http://farm.plista.com/pets"], :root a[href^="http://mo8mwxi1.com/"], :root div[class^="ResponsiveAd-"], :root a[href^="http://www.revenuehits.com/"], :root a[href^="http://go.seomojo.com/tracking202/"], :root div[id^="block-views-topheader-ad-block-"], :root a[href^="http://go.oclaserver.com/"], :root .__y_elastic .__y_item, :root a[href^="http://go.mobisla.com/"], :root a[href^="//srv.buysellads.com/"], :root a[href^="http://g1.v.fwmrm.net/ad/"], :root a[href^="http://imads.integral-marketing.com/"], :root a[href^="http://freesoftwarelive.com/"], :root a[href^="http://adtrackone.eu/"], :root a[href^="http://finaljuyu.com/"], :root a[href^="http://fileupnow.rocks/"], :root a[href^="http://fileloadr.com/"], :root a[href^="https://dltags.com/"], :root a[href^="http://onclickads.net/"], :root a[href^="http://www.terraclicks.com/"], :root a[href^="http://www.coinducks.com/"], :root a[href^="http://internalredirect.site/"], :root a[href^="http://extra.bet365.com/"][href*="?affiliate="], :root a[href^="http://ethfw0370q.com/"], :root a[href^="http://elitefuckbook.com/"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root [href*="//xml.revrtb.com/"], :root a[href^="http://elite-sex-finder.com/?"], :root a[href^="http://eclkmpsa.com/"], :root a[href*="//3wr110.xyz/"], :root a[href^="http://earandmarketing.com/"], :root a[href^="http://data.committeemenencyclopedicrepertory.info/"], :root #content > #center > .dose > .dosesingle, :root a[href^="http://campaign.bharatmatrimony.com/track/"], :root a[href^="http://d2.zedo.com/"], :root a[href^="http://contractallsticker.net/"], :root a[href^="http://codec.codecm.com/"], :root div[id^="google_dfp_"], :root a[href^="//5e1fcb75b6d662d.com/"], :root a[href^="http://googleads.g.doubleclick.net/pcs/click"], :root div[id^="ads120_600-widget"], :root a[href^="http://clk.directrev.com/"], :root a[href^="http://refer.webhostingbuzz.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://clickserv.sitescout.com/"], :root a[href*=".intab.fun/"], :root a[href^="http://clicks.guamwnvgashbkashawhgkhahshmashcas.pw/"], :root a[href^="http://www.downloadplayer1.com/"], :root a[href^="http://clicks.binarypromos.com/"], :root div[class^="largeRectangleAd_"], :root a[href^="https://dediseedbox.com/clients/aff.php?"], :root a[href^="http://www.wantstraffic.com/"], :root .lads[width="100%"][style="background:#FFF8DD"], :root a[href^="http://databass.info/"], :root a[href^="http://www.urmediazone.com/signup"], :root a[href^="http://ads.pheedo.com/"], :root a[href^="http://click.plista.com/pets"], :root a[href^="http://chaturbate.com/affiliates/"], :root a[href^="http://www.friendlyadvertisements.com/"], :root a[href^="http://cdn3.adbrau.com/"], :root a[href^="http://get.slickvpn.com/"], :root a[href^="http://2pxg8bcf.top/"], :root a[href^="http://cpaway.afftrack.com/"], :root a[href^="http://cdn.adsrvmedia.net/"], :root a[href^="http://360ads.go2cloud.org/"], :root a[href^="http://dftrck.com/"], :root a[href^="http://casino-x.com/?partner"], :root div[data-flt-ve="sponsored_search_ads"], :root a[href^="http://campeeks.com/"][href*="&utm_"], :root a[href^="http://ads.expekt.com/affiliates/"], :root a[href^="http://callville.xyz/"], :root div[itemtype="http://schema.org/WPAdBlock"], :root a[href^="http://xads.zedo.com/"], :root a[href^="http://c.jumia.io/"], :root a[href^="https://gamescarousel.com/"], :root a[href^="http://down1oads.com/"], :root a[href^="http://buysellads.com/"], :root a[href^="http://serve.williamhill.com/promoRedirect?"], :root a[href^="https://uncensored.game/"], :root a[href^="http://feedads.g.doubleclick.net/"], :root a[href^="http://bs.serving-sys.com/"], :root a[href^="http://popup.taboola.com/"], :root a[href^="http://betahit.click/"], :root a[href^="http://cinema.friendscout24.de?"], :root [lazy-ad="lefttop_banner"], :root a[href^="http://servicegetbook.net/"], :root a[href^="https://trklvs.com/"], :root a[href^="http://bestorican.com/"], :root a[href^="http://bcp.crwdcntrl.net/"], :root a[href^="http://bc.vc/?r="], :root a[href^="http://banners.victor.com/processing/"], :root a[href^="https://uncensored3d.com/"], :root a[href^="http://dethao.com/"], :root div[class$="dealnews"] > .dealnews, :root a[href^="http://click.payserve.com/"], :root a[href^="http://pubads.g.doubleclick.net/"], :root a[href^="http://azmobilestore.co/"], :root a[href^="http://install.securewebsiteaccess.com/"], :root .inlineNewsletterSubscription + .inlineNewsletterSubscription div[class$="_item"], :root a[href^="http://clkmon.com/adServe/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="http://www.torntvdl.com/"], :root a[href^="http://at.atwola.com/"], :root a[href^="//88d7b6aa44fb8eb.com/"], :root a[href^="http://api.ringtonematcher.com/"], :root div[id^="ad-position-"], :root a[href^="http://affiliate.glbtracker.com/"], :root a[href^="http://anonymous-net.com/"], :root a[href^="https://www.dsct1.com/"], :root a[href^="http://amzn.to/"] > img[src^="data"], :root .icons-rss-feed + .icons-rss-feed div[class$="_item"], :root a[href^="http://aflrm.com/"], :root a[href^="http://affiliates.pinnaclesports.com/processing/"], :root a[href^="http://affiliate.godaddy.com/"], :root a[href^="http://partner.sbaffiliates.com/"], :root a[href^="http://affiliate.coral.co.uk/processing/"], :root a[href^="http://aff.ironsocket.com/"], :root a[href^="http://zevera.com/afi.html"], :root a[href^="http://adsrv.keycaptcha.com"], :root a[href^="http://play4k.co/"], :root a[href^="http://adserving.liveuniversenetwork.com/"], :root a[href^="http://adserving.unibet.com/"], :root a[href^="https://bs.serving-sys.com"], :root a[href^="https://atomidownload.com/"], :root a[href^="http://adtransfer.net/"], :root a[href^="http://adserver.itsfogo.com/"], :root a[href^="https://secure.adnxs.com/clktrb?"], :root a[href^="http://adserver.adtechus.com/"], :root a[href^="http://adserver.adreactor.com/"], :root a[href^="http://www.yourfuckbook.com/?"], :root .GHOFUQ5BG2 > .GHOFUQ5BF2 > .GHOFUQ5BG5, :root a[href^="http://ads.sprintrade.com/"], :root .__ywvr .__y_item, :root a[href^="http://download-performance.com/"], :root #\5f _mom_ad_12, :root a[href^="http://ads.integral-marketing.com/"], :root a[href^="http://adserver.adtech.de/"], :root a[href*="deliver.trafficfabrik.com"], :root a[href^="http://ads.betfair.com/redirect.aspx?"], :root a[href^="http://ads.affbuzzads.com/"], :root a[href^="http://online.ladbrokes.com/promoRedirect?"], :root a[href^="http://go.trafficshop.com/"], :root a[href^="http://ads.ad-center.com/"], :root div[id^="advt-"], :root a[href^="http://admingame.info/"], :root a[href^="http://adlev.neodatagroup.com/"], :root div[id^="q1-adset-"], :root a[href^="http://adfarm.mediaplex.com/"], :root a[href^="http://ad.doubleclick.net/"], :root a[href^="http://ad.au.doubleclick.net/"], :root a[href^="http://www.adskeeper.co.uk/"], :root a[href^="http://ad-emea.doubleclick.net/"], :root a[href*="/servlet/click/zone?"], :root a[href^="http://ad-apac.doubleclick.net/"], :root a[href^="https://understandsolar.com/signup/?lead_source="][href*="&tracking_code="], :root a[href^="http://hdplugin.flashplayer-updates.com/"], :root a[href^="http://data.ad.yieldmanager.net/"], :root a[href^="http://a63t9o1azf.com/"], :root a[href^="http://NowDownloadAll.com"], :root a[href^="http://www.accuserveadsystem.com/accuserve-go.php?"], :root a[href^="http://c.ketads.com/"], :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root #tads + div + .c, :root a[href^="http://adtrack123.pl/"], :root a[href^="http://9amq5z4y1y.com/"], :root [id*="MGWrap"], :root a[href^="http://6kup12tgxx.com/"], :root a[href^="http://www.ducksnetwork.com/"], :root a[href^="http://3wr110.net/"], :root a[href^="http://www5.smartadserver.com/call/pubjumpi/"], :root a[href^="//ads.ad-center.com/"], :root a[href^="http://1phads.com/"], :root a[href^="https://chaturbate.com/in/?track="], :root a[href^="http://www1.clickdownloader.com/"], :root a[href^="//tracking.content-recommendation.net/"][href*="/sponsored/click.html?"], :root a[href^="http://adclick.g.doubleclick.net/"], :root #center_col > #resultStats + div[style="border:1px solid #dedede;margin-bottom:11px;padding:5px 7px 5px 6px"], :root a[href^="https://www.secureupload.eu/suprerefid="], :root a[href^="https://track.themadtrcker.com/"], :root a[href^="http://yads.zedo.com/"], :root #mbEnd[cellspacing="0"][cellpadding="0"], :root a[href^="//t.MtagMonetizationA.com/"], :root a[href^="//nlkdom.com/"], :root #MAIN.ShowTopic > .ad, :root a[href^="http://findersocket.com/"], :root a[href^="https://m.do.co/c/"] > img, :root a[href^="http://cdn3.adexprts.com/"], :root a[href^="//jsmptjmp.com/"], :root .ra[width="30%"][align="right"] + table[width="70%"][cellpadding="0"], :root a[href^="http://searchtabnew.com/"], :root a[href^="http://pan.adraccoon.com?"], :root a[href^="//healthaffiliate.center/"], :root a[href^="https://clixtrac.com/"], :root a[href^="//go.onclasrv.com/"], :root a[href^="http://games.ucoz.ru/"][target="_blank"], :root [id*="ScriptRoot"], :root div[id^="advads_"], :root a[href^="//db52cc91beabf7e8.com/"], :root a[href^="http://ads.activtrades.com/"], :root #\5f _mom_ad_2, :root div[id^="drudge-column-ads-"], :root a[href^="//api.ad-goi.com/"], :root a[href^="http://www.afgr2.com/"], :root #mn div[style="position:relative"] > #center_col > ._Ak, :root a[href^="http://bcntrack.com/"], :root a[href^="https://www.oboom.com/ad/"], :root a[href^="//4f6b2af479d337cf.com/"], :root a[href^="http://t.mdn2015x1.com/"], :root a[href^="http://s5prou7ulr.com/"], :root #content > #right > .dose > .dosesingle, :root a[href^="http://9nl.es/"], :root a[href^="https://www.friendlyduck.com/AF_"], :root #center_col > #resultStats + div + #res + #tads, :root a[href^="//40ceexln7929.com/"], :root a[href^="//00ae8b5a9c1d597.com/"], :root div[id^="div-gpt-ad"], :root a[href^="http://fusionads.net"], :root a[href^="https://awejmp.com/"], :root a[href^=" http://www.sex.com/"][href*="&utm_"], :root a[href^="https://keep2share.cc/pr/"], :root [onclick*="content.ad/"], :root div[class^="awpcp-random-ads"], :root a[href^="http://galleries.securewebsiteaccess.com/"], :root a[href^=" http://n47adshostnet.com/"], :root .section-result[data-result-ad-type], :root script[src^="http://free-shoutbox.net/app/webroot/shoutbox/sb.php?shoutbox="] + #freeshoutbox_content, :root a[href^=" http://ads.ad-center.com/"], :root .GPMV2XEDA2 > .GPMV2XEDP1 > .GPMV2XEDJBB, :root a[href*="onclkds."], :root div[id^="dfp-slot-"], :root .l-container > #fishtank, :root a[href^="//go.vedohd.org/"], :root a[href^="https://fileboom.me/pr/"], :root a[href^="http://marketgid.com"], :root a[href*="pussl3.com"], :root div[itemtype="http://www.schema.org/WPAdBlock"], :root .__zinit .__y_item, :root .ch[onclick="ga(this,event)"], :root a[href^="https://ad.doubleclick.net/"], :root a[href*="letsadvertisetogether.com"], :root div[class^="AdhesionAd_"], :root .trc_rbox_div .syndicatedItem, :root #ads > .dose > .dosesingle, :root a[href^="//bwnjijl7w.com/"], :root a[href*="delivery.trafficfabrik.com"], :root a[href^="http://galleries.pinballpublishernetwork.com/"], :root a[href^="http://4c7og3qcob.com/"], :root a[href*="?adlivk="][href*="&refer="], :root a[href^="http://data.linoleictanzaniatitanic.com/"], :root a[href*="=exoclick"], :root div[class^="backfill-taboola-home-slot-"], :root a[href^="https://gghf.mobi/"], :root a[href*="=adscript"], :root a[href^="http://abc2.mobile-10.com/"], :root #mn #center_col > div > h2.spon:first-child, :root a[href*="=Adtracker"], :root FBS-AD, :root .ra[align="right"][width="30%"], :root a[href*="5iclx7wa4q.com"], :root a[href*=".revimedia.com/"], :root a[href*=".irtyc.com/"], :root [lazy-ad="leftbottom_banner"], :root a[href^="http://fsoft4down.com/"], :root a[href*="ad2upapp.com/"], :root .plista_widget_belowArticleRelaunch_item[data-type="pet"], :root div[data-mediatype="advertising"], :root a[href*=".adsrv.eacdn.com/"] > img, :root a[href^="http://lp.ilivid.com/"], :root a[href*=".inclk.com/"], :root a[href^="https://transfer.xe.com/signup/track/redirect?"], :root a[href*=".ichlnk.com/"], :root a[href^="http://api.content.ad/"], :root a[href*=".approvallamp.club/"], :root a[href^="http://spygasm.com/track?"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root a[href*=".adk2x.com/"], :root a[href^="http://www.firstload.com/affiliate/"], :root a[href^="http://duckcash.eu/"], :root a[href^="http://www.mobileandinternetadvertising.com/"], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://www.downloadthesefiles.com/"], :root a[href^="http://secure.cbdpure.com/aff/"], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root a[href^="http://www.my-dirty-hobby.com/?sub="], :root a[href^="http://liversely.net/"], :root a[href^="http://www.bluehost.com/track/"] > img, :root a[data-url^="http://paid.outbrain.com/network/redir?"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://www.twinplan.com/AF_"], :root a[href^="http://n.admagnet.net/"], :root a[href^="http://connectlinking6.com/"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://www.getyourguide.com/?partner_id="], :root [onclick^="window.open('https://www.brazzersnetwork.com/landing/"], :root .plistaList > .itemLinkPET, :root a[href^="http://mgid.com/"], :root a[href^="http://adultfriendfinder.com/p/register.cgi?pid="], :root a[href*="a2g-secure.com"], :root a[href^="http://espn.zlbu.net/"], :root a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"], :root a[href^="http://k2s.cc/pr/"], :root p[id^="div-gpt-ad-"], :root #assetsListings[style="display: block;"], :root [onclick^="window.open('window.open('//delivery.trafficfabrik.com/"], :root a[href^="https://www.financeads.net/tc.php?"], :root [lazy-ad="top_banner"], :root a[href^="http://www.on2url.com/app/adtrack.asp"], :root #\5f _nq__hh[style="display:block!important"], :root a[href^="http://guideways.info/"], :root a[href^="http://campaign.bharatmatrimony.com/cbstrack/"], :root a[href*="//xml.revrtb.com/"], :root #rhs_block .mod > .gws-local-hotels__booking-module, :root a[href^="http://adrunnr.com/"], :root [lazy-ad="leftthin_banner"], :root a[href^="http://go.ad2up.com/"], :root [id*="MarketGid"], :root [id^="bunyad_ads_"], :root #mn #center_col > div > h2.spon:first-child + ol:last-child, :root .plistaList > .plista_widget_underArticle_item[data-type="pet"], :root a[href^="http://goldmoney.com/?gmrefcode="], :root a[href^="http://adexprt.me/"], :root a[href^="http://papi.mynativeplatform.com:80/pub2/"], :root LEADERBOARD-AD, :root a[href^="https://topoffers.com/"][href*="/?pid="], :root a[href^="http://vinfdv6b4j.com/"], :root a[href^="http://bonusfapturbo.nmvsite.com/"], :root DFP-AD, :root a[href^="//www.mgid.com/"], :root div[id^="ad-div-"], :root #center_col > div[style="font-size:14px;margin-right:0;min-height:5px"] > div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff8e7"], :root a[href^="http://track.affiliatenetwork.co.za/"], :root a[data-redirect^="http://paid.outbrain.com/network/redir?"], :root .jobs-information-call-to-action + .jobs-information-call-to-action div[class$="_item"], :root .__y_inner > .__y_item, :root a[href^="https://secure.cbdpure.com/aff/"], :root a[href^="https://bullads.net/get/"], :root AMP-AD, :root AD-SLOT, :root div[class^="lifeOnwerAd"], :root a[data-oburl^="http://paid.outbrain.com/network/redir?"], :root div[data-subscript="Advertising"], :root .widget-pane-section-result[data-result-ad-type], :root a[href^="http://ffxitrack.com/"], :root #center_col > #main > .dfrd > .mnr-c > .c._oc._zs, :root a[href^="http://t.mdn2015x2.com/"], :root a[href^="http://b.bestcompleteusa.info/"], :root .trc_rbox_div .syndicatedItemUB, :root a[href^="http://www.myvpn.pro/"], :root a[href^="http://hyperies.info/"], :root a[href^="//www.pd-news.com/"], :root .trc_rbox .syndicatedItem, :root a[href^="http://pwrads.net/"], :root div[class^="adpubs-"], :root #mn div[style="position:relative"] > #center_col > div > ._dPg, :root .rhsvw[style="background-color:#fff;margin:0 0 14px;padding-bottom:1px;padding-top:1px;"], :root a[href^="http://www.pinkvisualpad.com/?revid="], :root a[href^="//porngames.adult/?SID="], :root #main-content > [style="padding:10px 0 0 0 !important;"], :root a[href^="http://www.webtrackerplus.com/"], :root .GJJKPX2N1 > .GJJKPX2M1 > .GJJKPX2P4, :root a[href^="http://centertrust.xyz/"], :root .ob_container .item-container-obpd, :root a[href^="https://intrev.co/"], :root a[href^="http://record.sportsbetaffiliates.com.au/"], :root #topstuff > #tads, :root .mw > #rcnt > #center_col > #taw > #tvcap > .c, :root div[id^="google_ads_iframe_"], :root a[href^="http://www.pheedo.com/"], :root a[href^="http://www.affiliates1128.com/processing/"], :root .vi-lb-placeholder[title="ADVERTISEMENT"], :root a[href^="https://bongacams2.com/track?"], :root a[href^="//zenhppyad.com/"], :root .gbfwa > div[class$="_item"], :root a[href^="http://prochina.space/"], :root a[href^="http://www.uniblue.com/cm/"], :root a[data-redirect^="http://click.plista.com/pets"], :root #rhs_block > script + .c._oc._Ve.rhsvw, :root .rscontainer > .ellip, :root a[href^="http://track.incognitovpn.com/"], :root a[href^="http://click.guamwnvgashbkashawhgkhahshmashcas.pw/"], :root .__ywl .__y_item, :root a[href^="http://y1jxiqds7v.com/"], :root a[href^="http://www.afgr3.com/"], :root [ad-id^="googlead"], :root a[href^="https://control.trafficfabrik.com/"], :root a[href^="http://hd-plugins.com/download/"], :root a[href^="//voyeurhit.com/cs/"], :root a[href^="http://track.trkvluum.com/"], :root a[href*="/adrotate-out.php?"], :root [src^="/Redirect.a2b?"], :root a[href*=".clksite.com/"], :root #center_col > #resultStats + #tads, :root .__yinit .__y_item, :root .ra[align="left"][width="30%"], :root a[href^="https://trackjs.com/?utm_source"], :root AFS-AD, :root a[href^="http://server.cpmstar.com/click.aspx?poolid="], :root #cnt #center_col > #res > #topstuff > .ts, :root #cnt #center_col > #taw > #tvcap > .c._oc._Lp, :root .trc_rbox_div a[target="_blank"][href^="http://tab"], :root .GKJYXHBF2 > .GKJYXHBE2 > .GKJYXHBH5, :root a[href*="googleme.eu"], :root .mod > ._jH + .rscontainer, :root .GFYY1SVD2 > .GFYY1SVC2 > .GFYY1SVF5, :root a[href^="https://dcs.adgear.com/clicks/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://affiliates.score-affiliates.com/"], :root ADS-RIGHT, :root a[href^="https://betway.com/"][href*="&a="], :root a[href^="http://rekoverr.com/"], :root #rhswrapper > #rhssection[border="0"][bgcolor="#ffffff"], :root .Mpopup + #Mad > #MadZone, :root a[href^="http://landingpagegenius.com/"], :root a[href^="http://www.streamtunerhd.com/signup?"], :root #ssmiwdiv[jsdisplay], :root a[href^="https://www.adxtro.com/"], :root a[href^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://easydownload4you.com/"], :root #rhs_block > #mbEnd, :root #center_col > #\5f Emc, :root div[id^="dfp-ad-"], :root .GB3L-QEDGY .GB3L-QEDF- > .GB3L-QEDE-, :root #rhs_block .mod > .luhb-div > div[data-async-type="updateHotelBookingModule"], :root a[href^="http://srvpub.com/"], :root a[href^="http://a.adquantix.com/"], :root a[href^="http://ads2.williamhill.com/redirect.aspx?"], :root iframe[src^="http://static.mozo.com.au/strips/"], :root a[href^="https://www.spyoff.com/"], :root AD-TRIPLE-BOX, :root input[onclick^="window.open('http://www.FriendlyDuck.com/"], :root a[href^="//z6naousb.com/"], :root a[href^="http://taboola-"][href*="/redirect.php?app.type="], :root .mw > #rcnt > #center_col > #taw > .c, :root .rc-cta[data-target], :root #rhs_block > .ts[cellspacing="0"][cellpadding="0"][style="padding:0"], :root .GFYY1SVE2 > .GFYY1SVD2 > .GFYY1SVG5, :root #flowplayer > div[style="position: absolute; width: 300px; height: 275px; left: 222.5px; top: 85px; z-index: 999;"], :root a[href^="http://ddownload39.club/"], :root a[href^="http://www.sex.com/pics/?utm_"], :root a[href^="http://vo2.qrlsx.com/"], :root a[href^="http://engine.newsmaxfeednetwork.com/"], :root a[href^="http://ad.yieldmanager.com/"], :root a[href^="http://www.plus500.com/?id="], :root #flowplayer > div[style="z-index: 208; position: absolute; width: 300px; height: 275px; left: 222.5px; top: 85px;"], :root a[href^="http://cwcams.com/landing/click/"], :root a[href^="https://watchmygirlfriend.tv/"], :root .nrelate .nr_partner, :root #center_col > #resultStats + #tads + #res + #tads, :root .trc_related_container div[data-item-syndicated="true"], :root a[href^="//medleyads.com/spot/"], :root a[href*="mfroute.com/"], :root .trc_rbox_border_elm .syndicatedItem, :root a[href^="http://www.firstclass-download.com/"], :root a[href*=".trust.zone"], :root a[href^="http://dwn.pushtraffic.net/"], :root a[href$="/vghd.shtml"], :root a[href^="http://tezfiles.com/pr/"], :root a[href^="http://t.wowtrk.com/"], :root a[href^="http://adprovider.adlure.net/"], :root a[href^="https://porngames.adult/?SID="], :root #\5f _admvnlb_modal_container, :root a[href^="http://adf.ly/?id="], :root #center_col > #taw > #tvcap > .rscontainer, :root #rhs_block > ol > .rhsvw > .kp-blk > .xpdopen > ._OKe > ol > ._DJe > .luhb-div, :root a[href^="http://linksnappy.com/?ref="], :root #main_col > #center_col div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff7ed"], :root a[href^="http://webtrackerplus.com/"], :root a[href^="http://clickandjoinyourgirl.com/"], :root #center_col > #res > #topstuff + #search > div > #ires > #rso > #flun, :root a[href^="http://www.seekbang.com/cs/"], :root a[href^="http://syndication.exoclick.com/"], :root a[href^="http://bluehost.com/track/"], :root a[href^="https://squren.com/rotator/?atomid="], :root #resultspanel > #topads, :root a[href^="http://n217adserv.com/"], :root a[href^="//4c7og3qcob.com/"], :root #header + #content > #left > #rlblock_left, :root a[href*="emprestimo.eu"] { display: none !important; }</style>
+      <meta name="description" content="Organize and Track your Job Search" data-react-helmet="true">
+      <meta property="og:title" content="jats Board | My First Board | Sidharth Panicker" data-react-helmet="true">
+      <meta property="og:type" content="website" data-react-helmet="true">
+      <script type="text/javascript" charset="UTF-8" src="/static/jats_home/common.js"></script><script type="text/javascript" charset="UTF-8" src="/static/jats_home/util.js"></script>
+   </head>
+   <body class="">
+      <div id="react-container">
+         <div data-reactroot="" style="height: 100%;">
+            <div data-radium="true" style="height: 100%; display: flex; flex-direction: row; overflow: hidden;">
+               <div data-radium="true" style="display: flex; align-items: center; justify-content: start; padding: 20px 0px 50px; width: 60px; flex-grow: 0; flex-shrink: 0; flex-direction: column; background-color: rgb(24, 0, 69);">
+                  <a href="https://jats.co/" data-radium="true" style="margin-bottom: 20px;"><img src="/static/jats_home/jats_logo_mini.png" data-radium="true" style="width: 26px;"></a>
+                  <div data-radium="true" style="flex-grow: 1;"><a href="https://huntr.co/app/talks"><a target="_blank" data-radium="true" style="cursor: pointer; margin: 25px 0px; font-size: 18px; border-radius: 8px; position: relative; color: rgb(173, 168, 198); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease-out 0s;"><span class="icon icon-microphone" data-radium="true" style="position: relative; bottom: 1px; left: 1px;"></span></a></a><a href="https://huntr.co/app/track-landing"><a target="_blank" data-radium="true" style="cursor: pointer; margin: 25px 0px; font-size: 18px; border-radius: 8px; position: relative; color: white; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease-out 0s; background-color: rgb(106, 79, 235); box-shadow: rgb(24, 0, 69) 0px 0px 10px; text-shadow: rgba(25, 4, 69, 0.2) 0px 1px 2px;"><span class="icon icon-pin" data-radium="true" style="position: relative; bottom: 1px; left: 1px;"></span></a></a></div>
+                  <div data-radium="true"><a href="https://huntr.co/pricing" target="_blank" data-radium="true" style="cursor: pointer; margin: 25px 0px; font-size: 18px; border-radius: 8px; position: relative; color: rgb(173, 168, 198); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease-out 0s;"><span class="icon icon-diamond" data-radium="true" style="position: relative; bottom: 1px; left: 1px;"></span></a><a href="https://huntr.co/settings"><a target="_blank" data-radium="true" style="cursor: pointer; margin: 25px 0px; font-size: 18px; border-radius: 8px; position: relative; color: rgb(173, 168, 198); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease-out 0s;"><span class="icon icon-settings" data-radium="true" style="position: relative; bottom: 1px; left: 1px;"></span></a></a><a target="_blank" data-radium="true" style="cursor: pointer; margin: 25px 0px; font-size: 18px; border-radius: 8px; position: relative; color: rgb(173, 168, 198); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; transition: all 0.4s ease-out 0s;"><span class="icon icon-power" data-radium="true" style="position: relative; bottom: 1px; left: 1px;"></span></a></div>
+               </div>
+               <div data-radium="true" style="flex-grow: 1; position: relative; display: flex;">
+                  <div data-radium="true" style="display: flex; flex-direction: column; flex-grow: 1;">
+                     <!-- react-empty: 25 -->
+                     <div data-radium="true" style="line-height: 41px; display: flex; flex-grow: 0; flex-shrink: 0; padding: 0px 15px 0px 0px; flex-direction: row; border-bottom: 1px solid rgb(236, 233, 242);">
+                        <div class="top-nav" data-radium="true">
+                           <ul data-radium="true">
+                              <li class="menu-item" data-radium="true"><a class="selected" href="https://huntr.co/app/track/boards"><span class="icon icon-pin"></span><span>Boards</span></a></li>
+                              <li class="menu-item" data-radium="true"><a href="https://huntr.co/app/track/contacts"><span class="icon icon-people"></span><span>Contacts</span></a></li>
+                              <li class="menu-item" data-radium="true"><a href="https://huntr.co/app/track/briefcase"><span class="icon icon-docs"></span><span>Briefcase</span></a></li>
+                           </ul>
+                        </div>
+                        <div data-radium="true" style="flex-grow: 1;"></div>
+                        <div data-radium="true" style="flex-grow: 0; text-align: right; justify-content: flex-end;">
+                           <span class="has-popover">
+                              <span data-radium="true" style="cursor: pointer;">
+                                 <span data-radium="true" style="top: 4px; margin-right: 10px; position: relative;"><span data-radium="true" style="position: relative; display: inline-block; color: white; width: 20px; height: 20px; text-align: center; cursor: pointer; border-radius: 13px; font-size: 11px; font-weight: 600; text-transform: uppercase; background-color: rgb(218, 212, 227); box-shadow: rgba(25, 4, 69, 0.05) 0px 4px 10px;"><span data-radium="true" style="border: 1px solid rgb(218, 212, 227); width: 6px; height: 6px; background-color: rgb(173, 168, 198); border-radius: 4px; display: block; position: absolute; top: 2px; left: 6px; z-index: 1;"></span><span data-radium="true" style="box-shadow: rgba(25, 4, 69, 0.05) 0px 3px 6px; width: 10px; height: 6px; background-color: rgb(173, 168, 198); border-radius: 5px; display: block; position: absolute; top: 10px; left: 5px;"></span></span></span>
+                                 <p class="" style="color: rgb(121, 111, 141); font-size: 14px; font-family: lato; font-weight: 400; letter-spacing: 0px; display: inline-block; line-height: 21px;">Sidharth</p>
+                              </span>
+                           </span>
+                        </div>
+                     </div>
+                     <div data-radium="true" style="overflow-y: auto; flex-grow: 1; height: 100%; display: flex;">
+                        <div style="width: 100%; display: flex; flex-direction: column;">
+                           <!-- react-empty: 67 -->
+                           <div style="display: flex; text-transform: capitalize; padding: 0px 10px; align-items: center; height: 44px; line-height: 40px; border-bottom: 1px solid rgb(236, 233, 242);">
+                              <div style="flex-grow: 0; display: flex; flex-basis: 200px;">
+                                 <div class="truncate" data-radium="true">
+                                    <div data-radium="true" style="cursor: pointer; box-sizing: border-box; line-height: 30px; padding: 0px 12px 0px 20px; display: inline-block; color: rgb(24, 0, 69); font-weight: 600; border-radius: 4px; transition: all 0.4s ease-out 0s; background-color: white; text-align: center; font-size: 13px; letter-spacing: 0px; border: 1px solid rgb(228, 224, 236); position: relative; box-shadow: rgba(25, 4, 69, 0.05) 0px 2px 6px;">
+                                       <span class="icon icon-arrow-down" data-radium="true" style="color: rgba(25, 4, 69, 0.4); position: relative; right: 12px; line-height: 100%; font-size: 13px; margin-right: 0px;"></span><!-- react-text: 73 -->My First Board<!-- /react-text -->
+                                    </div>
+                                 </div>
+                              </div>
+                              <div style="flex-grow: 0; display: flex; justify-content: flex-end; flex-basis: 200px;">
+                                 <a href="https://huntr.co/app/track/boards/5cc7f370cd4c90000f4df5e4/share">
+                                    <div data-radium="true" style="cursor: pointer; box-sizing: border-box; line-height: 30px; padding: 0px 12px 0px 20px; display: inline-block; color: rgb(24, 0, 69); font-weight: 600; border-radius: 4px; transition: all 0.4s ease-out 0s; background-color: white; text-align: center; font-size: 13px; letter-spacing: 0px; border: 1px solid rgb(228, 224, 236); position: relative; box-shadow: rgba(25, 4, 69, 0.05) 0px 2px 6px;">
+                                       <span class="icon icon-share" data-radium="true" style="color: rgba(25, 4, 69, 0.4); position: relative; right: 12px; line-height: 100%; font-size: 13px; margin-right: 0px;"></span><!-- react-text: 91 -->Share Board<!-- /react-text -->
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                           <div style="flex-grow: 1; display: flex; white-space: nowrap; height: 100%;">
+                              <div style="overflow: auto; width: 100%; position: relative; background-color: rgb(247, 246, 250);">
+                                 <div>
+                                    <a href="https://huntr.co/app/track/boards/5cc7f370cd4c90000f4df5e4/add-job/5cc7f370cd4c90000f4df5e5">
+                                    <a target="_blank" class="animated tada" data-radium="true" style="box-sizing: border-box; line-height: 15px; display: inline-block; padding: 10px 20px 10px 25px; color: white; font-weight: 400; border-radius: 4px; transition: all 0.4s ease-out 0s; background-color: rgb(255, 53, 105); text-align: center; font-size: 14px; border: 1px solid rgba(25, 4, 69, 0.2); position: fixed; box-shadow: rgba(25, 4, 69, 0.05) 0px 4px 10px; bottom: 45px; right: 30px; z-index: 1;">
+                                       <span class="icon icon-plus" data-radium="true" style="color: white; position: relative; right: 10px; line-height: 100%; font-size: 13px; margin-right: 0px;"></span><!-- react-text: 98 -->Add Job<!-- /react-text -->
+                                    </a>
+                                    </a>
+                                    <div class="animated fadeInLeft" style="position: absolute; top: 0px; bottom: 0px; display: flex; flex-direction: row; overflow: hidden;">
+                                       <div class="list-container" style="display: flex; flex-direction: column;">
+                                          <div class="list-header" style="margin: 0px 28px; flex: 0 0 85px;">
+                                             <span class="icon icon-magic-wand" style="font-size: 18px; color: rgba(25, 4, 69, 0.4); margin-right: 10px;"></span>
+                                             <span>
+                                                <div style="position: absolute; top: 33px; left: 0px; right: 0px; text-align: center; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: rgba(25, 4, 69, 0.4); font-weight: 400;">
+                                                   <span>
+                                                      <!-- react-text: 113 -->1<!-- /react-text --><!-- react-text: 114 --> jobs<!-- /react-text -->
+                                                   </span>
+                                                </div>
+                                                <div class="editable-text-field">
+                                                   <form><input type="text" placeholder="List name" class="list-name" value="wishlist"></form>
+                                                </div>
+                                             </span>
+                                             <span>
+                                                <span class="list-icon-right icon-options"></span>
+                                                <div class="list-options">
+                                                   <!-- react-empty: 121 -->
+                                                </div>
+                                             </span>
+                                          </div>
+                                          <div style="flex: 0 0 47px;"><a class="add-job-block" href="https://huntr.co/app/track/boards/5cc7f370cd4c90000f4df5e4/add-job/5cc7f370cd4c90000f4df5e5">+</a></div>
+                                          <div class="inner-container">
+                                             <div>
+                                                <div class="card regular" draggable="true" style="background-color: rgba(144, 19, 254, 0.85);">
+                                                   <a class="card-link" href="https://huntr.co/app/track/boards/5cc7f370cd4c90000f4df5e4/job/5cc7f370cd4c90000f4df5ea/job-info">
+                                                      <div class="logo small">
+                                                         <div class="fake-logo" style="color: white; background-color: rgba(144, 19, 254, 0.85);"><span>H</span></div>
+                                                      </div>
+                                                      <div class="description">
+                                                         <p class="medium-font regular truncate" style="width: 180px; color: white;">Huntr</p>
+                                                         <p class="small-font regular seethrough truncate" style="color: white;">Sample Job Title</p>
+                                                      </div>
+                                                      <div class="float-right options"><span class="icon-trash"></span></div>
+                                                      <div class="card-footer" style="color: rgba(255, 255, 255, 0.6);">
+                                                         <span class="float-right truncate">
+                                                            <!-- react-text: 138 -->added <!-- /react-text --><!-- react-text: 139 -->a few seconds<!-- /react-text --><!-- react-text: 140 --> ago<!-- /react-text -->
+                                                         </span>
+                                                      </div>
+                                                   </a>
+                                                </div>
+                                                <div></div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="list-container" style="display: flex; flex-direction: column;">
+                                          <div class="list-header" style="margin: 0px 28px; flex: 0 0 85px;">
+                                             <span class="icon icon-doc" style="font-size: 18px; color: rgba(25, 4, 69, 0.4); margin-right: 10px;"></span>
+                                             <span>
+                                                <div style="position: absolute; top: 33px; left: 0px; right: 0px; text-align: center; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: rgba(25, 4, 69, 0.4); font-weight: 400;">
+                                                   <span>
+                                                      <!-- react-text: 148 -->0<!-- /react-text --><!-- react-text: 149 --> jobs<!-- /react-text -->
+                                                   </span>
+                                                </div>
+                                                <div class="editable-text-field">
+                                                   <form><input type="text" placeholder="List name" class="list-name" value="applied"></form>
+                                                </div>
+                                             </span>
+                                             <span>
+                                                <span class="list-icon-right icon-options"></span>
+                                                <div class="list-options">
+                                                   <!-- react-empty: 156 -->
+                                                </div>
+                                             </span>
+                                          </div>
+                                          <div style="flex: 0 0 47px;"><a class="add-job-block" href="https://huntr.co/app/track/boards/5cc7f370cd4c90000f4df5e4/add-job/5cc7f370cd4c90000f4df5e6">+</a></div>
+                                          <div class="inner-container"></div>
+                                       </div>
+                                       <div class="list-container" style="display: flex; flex-direction: column;">
+                                          <div class="list-header" style="margin: 0px 28px; flex: 0 0 85px;">
+                                             <span class="icon icon-briefcase" style="font-size: 18px; color: rgba(25, 4, 69, 0.4); margin-right: 10px;"></span>
+                                             <span>
+                                                <div style="position: absolute; top: 33px; left: 0px; right: 0px; text-align: center; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: rgba(25, 4, 69, 0.4); font-weight: 400;">
+                                                   <span>
+                                                      <!-- react-text: 166 -->0<!-- /react-text --><!-- react-text: 167 --> jobs<!-- /react-text -->
+                                                   </span>
+                                                </div>
+                                                <div class="editable-text-field">
+                                                   <form><input type="text" placeholder="List name" class="list-name" value="interview"></form>
+                                                </div>
+                                             </span>
+                                             <span>
+                                                <span class="list-icon-right icon-options"></span>
+                                                <div class="list-options">
+                                                   <!-- react-empty: 174 -->
+                                                </div>
+                                             </span>
+                                          </div>
+                                          <div style="flex: 0 0 47px;"><a class="add-job-block" href="https://huntr.co/app/track/boards/5cc7f370cd4c90000f4df5e4/add-job/5cc7f370cd4c90000f4df5e7">+</a></div>
+                                          <div class="inner-container"></div>
+                                       </div>
+                                       <div class="list-container" style="display: flex; flex-direction: column;">
+                                          <div class="list-header" style="margin: 0px 28px; flex: 0 0 85px;">
+                                             <span class="icon icon-trophy" style="font-size: 18px; color: rgba(25, 4, 69, 0.4); margin-right: 10px;"></span>
+                                             <span>
+                                                <div style="position: absolute; top: 33px; left: 0px; right: 0px; text-align: center; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: rgba(25, 4, 69, 0.4); font-weight: 400;">
+                                                   <span>
+                                                      <!-- react-text: 184 -->0<!-- /react-text --><!-- react-text: 185 --> jobs<!-- /react-text -->
+                                                   </span>
+                                                </div>
+                                                <div class="editable-text-field">
+                                                   <form><input type="text" placeholder="List name" class="list-name" value="offer"></form>
+                                                </div>
+                                             </span>
+                                             <span>
+                                                <span class="list-icon-right icon-options"></span>
+                                                <div class="list-options">
+                                                   <!-- react-empty: 192 -->
+                                                </div>
+                                             </span>
+                                          </div>
+                                          <div style="flex: 0 0 47px;"><a class="add-job-block" href="https://huntr.co/app/track/boards/5cc7f370cd4c90000f4df5e4/add-job/5cc7f370cd4c90000f4df5e8">+</a></div>
+                                          <div class="inner-container"></div>
+                                       </div>
+                                       <div class="list-container" style="display: flex; flex-direction: column;">
+                                          <div class="list-header" style="margin: 0px 28px; flex: 0 0 85px;">
+                                             <span class="icon icon-dislike" style="font-size: 18px; color: rgba(25, 4, 69, 0.4); margin-right: 10px;"></span>
+                                             <span>
+                                                <div style="position: absolute; top: 33px; left: 0px; right: 0px; text-align: center; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; color: rgba(25, 4, 69, 0.4); font-weight: 400;">
+                                                   <span>
+                                                      <!-- react-text: 202 -->0<!-- /react-text --><!-- react-text: 203 --> jobs<!-- /react-text -->
+                                                   </span>
+                                                </div>
+                                                <div class="editable-text-field">
+                                                   <form><input type="text" placeholder="List name" class="list-name" value="rejected"></form>
+                                                </div>
+                                             </span>
+                                             <span>
+                                                <span class="list-icon-right icon-options"></span>
+                                                <div class="list-options">
+                                                   <!-- react-empty: 210 -->
+                                                </div>
+                                             </span>
+                                          </div>
+                                          <div style="flex: 0 0 47px;"><a class="add-job-block" href="https://huntr.co/app/track/boards/5cc7f370cd4c90000f4df5e4/add-job/5cc7f370cd4c90000f4df5e9">+</a></div>
+                                          <div class="inner-container"></div>
+                                       </div>
+                                       <div class="list-container">
+                                          <div class="add-list-block">+ Add list</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript" src="/static/jats_home/bundle.js"></script><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeController1" allowpaymentrequest="true" src="/static/jats_home/controller-ce79cab6b3f78ca227c2d539af287e18.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important;"></iframe>
+      <!-- HelpCrunch -->
+      <script type="text/javascript">
+         (function(w,d){
+           w.HelpCrunch=function(){w.HelpCrunch.q.push(arguments)};w.HelpCrunch.q=[];
+           function r(){var s=document.createElement('script');s.async=1;s.type='text/javascript';s.src='https://widget.helpcrunch.com/';(d.body||d.head).appendChild(s);}
+           if(w.attachEvent){w.attachEvent('onload',r)}else{w.addEventListener('load',r,false)}
+           })(window, document)
+           
+      </script>
+      <!-- end HelpCrunch -->
+      <iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeMetricsController0" allowpaymentrequest="true" src="/static/jats_home/outer.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important;"></iframe><script async="" type="text/javascript" src="/static/jats_home/saved_resource(1)"></script>
+      <style>.helpcrunch-iframe-wrapper,[name='helpcrunch-iframe']{animation:none;animation-delay:0;animation-direction:normal;animation-duration:0;animation-fill-mode:none;animation-iteration-count:1;animation-name:none;animation-play-state:running;animation-timing-function:ease;backface-visibility:visible;background:0;background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;background-position:0 0;background-position-x:0;background-position-y:0;background-repeat:repeat;background-size:auto auto;border:0;border-style:none;border-width:medium;border-color:inherit;border-bottom:0;border-bottom-color:inherit;border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-style:none;border-bottom-width:medium;border-collapse:separate;border-image:none;border-left:0;border-left-color:inherit;border-left-style:none;border-left-width:medium;border-radius:0;border-right:0;border-right-color:inherit;border-right-style:none;border-right-width:medium;border-spacing:0;border-top:0;border-top-color:inherit;border-top-left-radius:0;border-top-right-radius:0;border-top-style:none;border-top-width:medium;bottom:auto;box-shadow:none;box-sizing:content-box;caption-side:top;clear:none;clip:auto;color:inherit;columns:auto;column-count:auto;column-fill:balance;column-gap:normal;column-rule:medium none currentColor;column-rule-color:currentColor;column-rule-style:none;column-rule-width:none;column-span:1;column-width:auto;content:normal;counter-increment:none;counter-reset:none;cursor:auto;direction:ltr;display:inline;empty-cells:show;-ms-flex:none;flex:none;float:none;font:normal;font-family:inherit;font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;height:auto;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;left:auto;letter-spacing:normal;line-height:normal;list-style:none;list-style-image:none;list-style-position:outside;list-style-type:disc;margin:0;margin-bottom:0;margin-left:0;margin-right:0;margin-top:0;max-height:none;max-width:none;min-height:0;min-width:0;opacity:1;orphans:0;outline:0;outline-color:invert;outline-style:none;outline-width:medium;overflow:visible;overflow-x:visible;overflow-y:visible;padding:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;page-break-after:auto;page-break-before:auto;page-break-inside:auto;perspective:none;perspective-origin:50% 50%;position:static;quotes:none;right:auto;-moz-tab-size:8;tab-size:8;table-layout:auto;text-align:inherit;text-align-last:auto;text-decoration:none;-webkit-text-decoration-color:inherit;text-decoration-color:inherit;-webkit-text-decoration-line:none;text-decoration-line:none;-webkit-text-decoration-style:solid;text-decoration-style:solid;text-indent:0;text-shadow:none;text-transform:none;top:auto;-ms-transform:none;transform:none;transform-style:flat;transition:none;transition-delay:0;transition-duration:0;transition-property:none;transition-timing-function:ease;unicode-bidi:normal;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:baseline;visibility:visible;white-space:normal;widows:0;width:auto;word-spacing:normal;z-index:auto}</style>
+      <div class="helpcrunch-iframe-wrapper"><iframe name="helpcrunch-iframe" scrolling="no" style="border: 0px; position: fixed; bottom: 15px; right: auto; left: 20px; z-index: 16777000; margin: 0px; padding: 0px; width: 70px !important; height: 70px !important; max-width: 100%; max-height: 100%; visibility: visible;" src="/static/jats_home/saved_resource.html"></iframe></div>
+   </body>
+</html>

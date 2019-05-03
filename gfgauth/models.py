@@ -11,5 +11,14 @@ class CredentialsModel(models.Model):
     updated_time = models.CharField(max_length=80, null=True)
 
 
+class TrackStatus(models.Model):
+    messageid = models.CharField(max_length=100, null=True)
+    userid = models.CharField(max_length=100, null=True)
+    date = models.CharField(max_length=100, null=True)
+    company = models.CharField(max_length=100, null=True)
+    job_role = models.CharField(max_length=100, null=True)
+    status = models.CharField(max_length=100, null=True)
+
+
 class CredentialsAdmin(admin.ModelAdmin):
     pass

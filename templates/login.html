@@ -1,8 +1,16 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 {% block content %}
-  <h2>Log in to My Site</h2>
+  <h2>Job Application Tracker</h2>
+    <h5>Welcome to the login page!!</h5>
   {% if form.errors %}
     <p style="color: red">Your username and password didn't match. Please try again.</p>
   {% endif %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
   <form method="post">
     {% csrf_token %}
     <input type="hidden" name="next" value="{{ next }}" />
@@ -21,4 +29,10 @@
     <button type="submit">Log in</button>
     <a href="{% url 'signup' %}">New to My Site? Sign up</a>
   </form>
+ </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

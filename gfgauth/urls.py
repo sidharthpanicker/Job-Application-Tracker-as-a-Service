@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     url(r'^gmailAuthenticate', views.gmail_authenticate, name='gmail_authenticate'),
     url(r'^oauth2callback', views.auth_return),
+    url(r'^myhome', views.renderHome),
     url(r'^$', views.home, name='home'),
 ]
